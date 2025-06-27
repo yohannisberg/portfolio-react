@@ -1,6 +1,6 @@
 const Header = () => {
   <header>
-      <div class="container">
+    <div class="container">
       <h1>I love
           <span
               class="txt-rotate"
@@ -8,7 +8,7 @@ const Header = () => {
               data-rotate='[ "to develop.", "to learn.", "a challenge.", "lamp ;)" ]'>
           </span>
       </h1>
-      </div>
+    </div>
   </header>
 };
 

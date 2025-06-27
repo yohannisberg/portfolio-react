@@ -1,7 +1,7 @@
 
 const Navbar = () => {
   return (
-    <nav id="mainNav" className="navbar navbar-default navbar-custom navbar-fixed-top">
+    <nav className="navbar navbar-default navbar-custom navbar-fixed-top">
       <div className="container">
         <div className="navbar-header page-scroll">
           <button

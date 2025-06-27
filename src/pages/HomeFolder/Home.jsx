@@ -1,3 +1,4 @@
+import TopNav from './TopNav';
 import Navbar from './Navbar';
 import Header from './Header';
 import Skills from './Skills';
@@ -9,13 +10,11 @@ import Footer from './Footer';
 export function Home() {
   return (
     <>
-      <Navbar />
+      <TopNav />
+      {/* <Navbar /> */}
       <Header />
       <Skills />
-      <Likes />
       <Portfolio />
-      <About />
-      <Footer />
     </>
   );
 };

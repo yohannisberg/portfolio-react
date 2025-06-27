@@ -1,121 +1,120 @@
 const About = () => {
-  return (
-    <>
-    <section id="about" class="bg-light-gray">
-      <div class="container">
-        <div class="">
-          <div class="col-lg-12 text-center">
-              <h2 class="section-heading">Skills</h2>
+<>
+    <section id="about" className="bg-light-gray">
+      <div className="container">
+        <div className="">
+          <div className="col-lg-12 text-center">
+              <h2 className="section-heading">Skills</h2>
           </div>
 
-          <div class= "langIconWrapper">
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80 showcase-inner" src="./pictures/angular-color.svg" width="80px" />
+          <div className= "langIconWrapper">
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80 showcase-inner" src="../../public/angular-color.svg" width="80px" />
               </div>
-              <div class="iconSub">AngularJS</div>
+              <div className="iconSub">AngularJS</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/javascript.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/javascript.svg" />
               </div>
-              <div class="iconSub">JavaScript</div>
+              <div className="iconSub">JavaScript</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/html5-color.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/html5-color.svg" />
               </div>
-              <div class="iconSub">HTML5</div>
+              <div className="iconSub">HTML5</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/css3-color.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/css3-color.svg" />
               </div>
-              <div class="iconSub">CSS3</div>
+              <div className="iconSub">CSS3</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/Npm-logo.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/Npm-logo.svg" />
               </div>
-              <div class="iconSub">NPM</div>
+              <div className="iconSub">NPM</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/nodejs.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/nodejs.svg" />
               </div>
-              <div class="iconSub">Node.JS</div>
+              <div className="iconSub">Node.JS</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/git.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/git.svg" />
               </div>
-              <div class="iconSub">Git</div>
+              <div className="iconSub">Git</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/Postgres.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/Postgres.svg" />
               </div>
-              <div class="iconSub">SQL</div>
+              <div className="iconSub">SQL</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/express.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/express.png" />
               </div>
-              <div class="iconSub">Express.JS</div>
+              <div className="iconSub">Express.JS</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon35" src="./pictures/gulp.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon35" src="../../public/gulp.svg" />
               </div>
-              <div class="iconSub">Gulp</div>
+              <div className="iconSub">Gulp</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/PHP-logo.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/PHP-logo.svg" />
               </div>
-              <div class="iconSub">PHP</div>
+              <div className="iconSub">PHP</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/jquery-icon.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/jquery-icon.png" />
               </div>
-              <div class="iconSub">jQuery</div>
+              <div className="iconSub">jQuery</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/sass2.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/sass2.png" />
               </div>
-              <div class="iconSub">Sass</div>
+              <div className="iconSub">Sass</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/Boostrap_logo.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/Boostrap_logo.svg" />
               </div>
-              <div class="iconSub">Bootstrap</div>
+              <div className="iconSub">Bootstrap</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/pscs6.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/pscs6.png" />
               </div>
-              <div class="iconSub">Adobe Photoshop</div>
+              <div className="iconSub">Adobe Photoshop</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/sonyVegas.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/sonyVegas.png" />
               </div>
-              <div class="iconSub">Sony Vegas</div>
+              <div className="iconSub">Sony Vegas</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/wordpress.svg" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/wordpress.svg" />
               </div>
-              <div class="iconSub">Wordpress</div>
+              <div className="iconSub">Wordpress</div>
             </div>
-            <div class="langIconWrap">
-              <div class='imgWrapper'>
-              <img class="langIcon80" src="./pictures/coding.png" />
+            <div className="langIconWrap">
+              <div className='imgWrapper'>
+              <img className="langIcon80" src="../../public/coding.png" />
               </div>
-              <div class="iconSub">(More to come!)</div>
+              <div className="iconSub">(More to come!)</div>
             </div>
 
           </div>
@@ -124,9 +123,8 @@ const About = () => {
       </div>
     </section>
 
-    <div class="" data-parallax="scroll" data-image-src="./pictures/background1.JPG"></div>
+    <div className="" data-parallax="scroll" data-image-src="../../public/background1.JPG"></div>
    </>
-  );
 };
 
 export default About;
