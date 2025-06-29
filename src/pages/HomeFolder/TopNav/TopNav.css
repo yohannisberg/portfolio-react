@@ -1,0 +1,30 @@
+
+.navbar-custom {
+  padding-top: calc(var(--vw) * 2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, padding .3s;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar-custom a {
+  color: #ffffff;
+  
+}
+.navbar-custom .navbar-brand {
+  font-size: calc(var(--vw)*2.15);
+  font-weight: 700;
+}
+.navbar-custom .navbar-nav a {
+  text-transform: uppercase;
+  font-size: calc(var(--vw) * 1.1);
+  letter-spacing: calc(var(--vw) * .1);
+  padding-left: calc(var(--vw) * 1.4);
+  margin-left: calc(var(--vw) * .4);
+}
+
+.navbar-custom.scrolled {
+ background-color: #65afff;
+  padding-top: calc(var(--vw) * 1.1);
+  padding-bottom: calc(var(--vw) * 1.1);
+}
+.navbar-custom.scrolled .navbar-brand {
+  font-size: calc(var(--vw)*1.55);
+}

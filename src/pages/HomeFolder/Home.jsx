@@ -1,5 +1,5 @@
-import TopNav from './TopNav';
-import Navbar from './Navbar';
+import Hero from './Hero/Hero';
+import TopNav from './TopNav/TopNav';
 import Header from './Header';
 import Skills from './Skills';
 import Likes from './Likes';
@@ -11,10 +11,7 @@ export function Home() {
   return (
     <>
       <TopNav />
-      {/* <Navbar /> */}
-      <Header />
-      <Skills />
-      <Portfolio />
+      <Hero />
     </>
   );
 };
