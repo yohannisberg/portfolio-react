@@ -20,7 +20,7 @@ const TopNav = () => {
   return (
     <Navbar expand="lg" fixed="top" className={`navbar-custom custom-navbar ${scrolled ? 'scrolled' : ''}`}>
       <Container>
-        <Navbar.Brand class="name-nav" href="#">John D'Agostino</Navbar.Brand>
+        <Navbar.Brand href="#">John D'Agostino</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="ms-auto">
