@@ -1,4 +1,5 @@
 .hero-wrapper {
+  position: relative;
   width:100%;
   height:100%;
   background:#111b29;
@@ -22,15 +23,8 @@
   left: 0;
   padding: 0;
 
-  background-color: black;
 }
 
-.hero-parallax .layer_1,
-.hero-parallax .layer_2,
-.hero-parallax .layer_3 {
-  /* width: 100%; */
-  /* transform: translate(-50, -50) scale(1.5); */
-}
 .hero-parallax text {
   font-size: calc(var(--vwFW) * 4);
   margin-right: calc(var(--vwFW) * 1);
@@ -42,26 +36,3 @@
 .hero-parallax .skills {
   font-weight: 700;
 }
-
-
-
-
-@media only screen and (min-width:75em) {
-  /* .hero-parallax .layer_1,
-  .hero-parallax .layer_2,
-  .hero-parallax .layer_3 {
-    
-  } */
-}
-
-/* @media (max-width: 768px) {
-  .hero-parallax .layer_1,
-  .hero-parallax .layer_2,
-  .hero-parallax .layer_3 {
-    transform: scale(2.5);
-  }
-  .hero-wrapper svg {
-    height: 450px;
-    width: 100%;
-  }
-} */

@@ -56,10 +56,10 @@ const Hero = () => {
         scrub:1
       },
     })
-    .fromTo(layer3Ref.current, { y: -182 }, { y: -780 }, 0)
-    .fromTo(layer2Ref.current, { y: 550 }, { y: -100 }, 0)
-    .fromTo(layer1Ref.current, { y: 0 }, { y: -300 }, 0)
-    .fromTo(cloud1Ref.current, { y: 0 }, { y: -800 }, 0);
+    .fromTo(layer3Ref.current, { y: 10 }, { y: -550 }, 0)
+    .fromTo(layer2Ref.current, { y: 495 }, { y: -125 }, 0)
+    .fromTo(layer1Ref.current, { y: 394 }, { y: -300 }, 0)
+    .fromTo(cloud1Ref.current, { y: 100 }, { y: -2000 }, 0);
   }, []);
 
 
@@ -74,7 +74,7 @@ const Hero = () => {
         >
           <defs>
             <mask id="m">
-              <g className="cloud1" ref={cloud1Ref} >
+              <g className="cloud1" ref={cloud1Ref} transform="translate(600, 400) scale(1.5) translate(-600, -400)">
                 <rect fill="#fff" width="100%" height="100%"/>
                 <image href="../../../public/HeroImages/cloudMask.jpg" width="100%" height="100%"/>
               </g>
@@ -95,21 +95,8 @@ const Hero = () => {
           </text>
 
           <g transform="translate(600, 400) scale(1.5) translate(-600, -400)">
-          <image className="layer_1" ref={layer1Ref} href=".../../../public/HeroImages/layer_1_2.png" width="1200" /> 
+            <image className="layer_1" ref={layer1Ref} href=".../../../public/HeroImages/layer_1_2.png" width="1200" />
           </g>
-
-          {/* <g transform="translate(600, 400) scale(1.5)">
-            <image
-              className="layer_1"
-              ref={layer1Ref}
-              href=".../../../public/HeroImages/layer_1_2.png"
-              x="-600"
-              y="-400"
-              width="1200"
-              height="800"
-            />
-          </g> */}
-
           
            <g mask="url(#m)">
             <rect fill="#fff" width="100%" height="100%" />
