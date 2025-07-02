@@ -51,15 +51,23 @@ const Hero = () => {
     gsap.timeline({
       scrollTrigger:{
         trigger:scrollDistRef.current,
-        start:'0 0',
-        end:'100% 100%',
-        scrub:1
+        start:'0% 0%', //(start animation) (start trigger)
+        end:'80% 50%', //(end animation) (end trigger)
+        // start:'0% 0%',
+        // end:'2% 1%',
+        scrub:1,
+        // markers: true
       },
     })
-    .fromTo(layer3Ref.current, { y: 10 }, { y: -550 }, 0)
-    .fromTo(layer2Ref.current, { y: 495 }, { y: -125 }, 0)
-    .fromTo(layer1Ref.current, { y: 394 }, { y: -300 }, 0)
-    .fromTo(cloud1Ref.current, { y: 100 }, { y: -2000 }, 0);
+    .fromTo(layer3Ref.current, { y: 10 }, { y: -40 }, 0)
+    .fromTo(layer2Ref.current, { y: 495 }, { y: 435 }, 0)
+    .fromTo(layer1Ref.current, { y: 400 }, { y: 310 }, 0)
+    .fromTo(cloud1Ref.current, { y: 300 }, { y: 20, roundProps: 'y' }, 0);
+
+    // .fromTo(layer3Ref.current, { y: 10 }, { y: -550 }, 0)
+    // .fromTo(layer2Ref.current, { y: 495 }, { y: -125 }, 0)
+    // .fromTo(layer1Ref.current, { y: 394 }, { y: -300 }, 0)
+    // .fromTo(cloud1Ref.current, { y: 100 }, { y: -2500, roundProps: 'y' }, 0);
   }, []);
 
 
@@ -74,9 +82,9 @@ const Hero = () => {
         >
           <defs>
             <mask id="m">
-              <g className="cloud1" ref={cloud1Ref} transform="translate(600, 400) scale(1.5) translate(-600, -400)">
-                <rect fill="#fff" width="100%" height="100%"/>
-                <image href="../../../public/HeroImages/cloudMask.jpg" width="100%" height="100%"/>
+              <g className="cloud1" ref={cloud1Ref} transform="translate(600, 400) scale(1) translate(-600, -400)">
+                <rect fill="#fff" width="100%" height="100%" y="1"/>
+                <image href="../../../public/HeroImages/cloudMask.jpg" width="100%" height="100%" />
               </g>
             </mask>
           </defs>
@@ -90,7 +98,7 @@ const Hero = () => {
           </g>
         
 
-           <text fill="#fff" x="50%" y="320" textAnchor="middle" dominantBaseline="middle">I LOVE&nbsp; 
+           <text fill="#fff" x="50%" y="280" textAnchor="middle" dominantBaseline="middle">I LOVE&nbsp; 
             <tspan fill="#fff">{text}</tspan>{showCursor && <tspan fill="#808080">|</tspan>}
           </text>
 
@@ -100,7 +108,7 @@ const Hero = () => {
           
            <g mask="url(#m)">
             <rect fill="#fff" width="100%" height="100%" />
-            <text className="skills" x="50%" y="320" textAnchor="middle" dominantBaseline="middle" fill="#000000">SKILLS</text>
+             {/* <text className="skills" x="50%" y="700" textAnchor="middle" dominantBaseline="middle" fill="#000000">SKILLS</text> */}
           </g>
           
         </svg>

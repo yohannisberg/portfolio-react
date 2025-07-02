@@ -13,6 +13,7 @@ export function Home() {
       <TopNav />
       <Hero />
       <Skills />
+      <Skills />
     </>
   );
 };

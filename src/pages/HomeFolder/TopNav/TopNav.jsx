@@ -9,7 +9,7 @@ const TopNav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setScrolled(offset > 350); // this will be 'true' once larger than 50px
+      setScrolled(offset > 60); // this will be 'true' once larger than 50px
     };
 
     window.addEventListener('scroll', handleScroll);

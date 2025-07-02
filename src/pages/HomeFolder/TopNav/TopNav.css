@@ -21,10 +21,40 @@
 }
 
 .navbar-custom.scrolled {
- background-color: #65afff;
+  background-color: #65afff;
   padding-top: calc(var(--vw) * 1.1);
   padding-bottom: calc(var(--vw) * 1.1);
 }
 .navbar-custom.scrolled .navbar-brand {
   font-size: calc(var(--vw)*1.55);
+}
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    background-color: #65afff;
+  }
+  .navbar-custom .container {
+    max-width: 900px;
+  }
+  .navbar-custom .navbar-brand {
+    padding-left: calc(var(--vw)*2);
+  }
+  .navbar-custom .navbar-nav a {
+    font-size: calc(var(--vw) * 1.8);
+    padding-left: calc(var(--vw)*2);
+  }
+  .navbar-custom .navbar-toggler:focus {
+    --bs-navbar-toggler-focus-width: 0.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-custom .navbar-brand {
+    font-size: calc(var(--vw)*4.5);
+    font-weight: 700;
+    padding-left: calc(var(--vw)* 2.2);
+  }
+  .navbar-custom .navbar-nav a {
+    font-size: calc(var(--vw) * 3.5);
+  }
 }
