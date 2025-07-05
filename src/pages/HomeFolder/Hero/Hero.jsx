@@ -6,21 +6,64 @@ import './Hero.css';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const phrases = ["TO DEVELOP.", "TO LEARN.","A CHALLENGE.", "LAMP :)" ];
+const phrases = ["TO DEVELOP.", "TO LEARN.", "A CHALLENGE.", "LAMP :)"];
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [text, setText] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+  const [textY, setTextY] = useState(isMobile ? 420 : 280);
+
   const scrollDistRef = useRef(null);
   const layer1Ref = useRef(null);
   const layer2Ref = useRef(null);
   const layer3Ref = useRef(null);
   const cloud1Ref = useRef(null);
+  const svgRef = useRef(null);
+  const heroWrapperRef = useRef(null);
+    
+  // Scroll to top and fade in on mount
+  useEffect(() => {
+    // Start hidden (make sure in CSS .hero-wrapper opacity:0)
+    if (heroWrapperRef.current) {
+      gsap.set(heroWrapperRef.current, { opacity: 0, pointerEvents: 'none' });
+    }
 
-  const [text, setText] = useState('');
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [showCursor, setShowCursor] = useState(true);
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
 
-  // Cursor blink
+    // After a tiny delay, refresh ScrollTrigger and fade in
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+
+      if (heroWrapperRef.current) {
+        gsap.to(heroWrapperRef.current, {
+          duration: 1,
+          opacity: 1,
+          pointerEvents: 'auto',
+          ease: 'power1.out',
+        });
+      }
+    }, 50);
+  }, []);
+
+
+  // Update isMobile and textY on resize, refresh ScrollTrigger
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      setTextY(mobile ? 420 : 280);
+      ScrollTrigger.refresh();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Cursor blink effect
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
@@ -28,89 +71,204 @@ const Hero = () => {
     return () => clearInterval(cursorInterval);
   }, []);
 
-  // ⌨️ Typewriter logic
+  // Typewriter effect
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
     if (charIndex <= currentPhrase.length) {
       const timeout = setTimeout(() => {
         setText(currentPhrase.slice(0, charIndex));
-        setCharIndex((prev) => prev + 1);
+        setCharIndex(charIndex + 1);
       }, 150);
       return () => clearTimeout(timeout);
     } else {
-      // Wait and go to next phrase
       const wait = setTimeout(() => {
         setCharIndex(0);
-        setPhraseIndex((prev) => (prev + 1) % phrases.length);
+        setPhraseIndex((phraseIndex + 1) % phrases.length);
       }, 1500);
       return () => clearTimeout(wait);
     }
   }, [charIndex, phraseIndex]);
 
+  // Update SVG viewBox based on isMobile
   useEffect(() => {
-    gsap.timeline({
-      scrollTrigger:{
-        trigger:scrollDistRef.current,
-        start:'0% 0%', //(start animation) (start trigger)
-        end:'80% 50%', //(end animation) (end trigger)
-        // start:'0% 0%',
-        // end:'2% 1%',
-        scrub:1,
-        // markers: true
-      },
-    })
-    .fromTo(layer3Ref.current, { y: 10 }, { y: -40 }, 0)
-    .fromTo(layer2Ref.current, { y: 495 }, { y: 435 }, 0)
-    .fromTo(layer1Ref.current, { y: 400 }, { y: 310 }, 0)
-    .fromTo(cloud1Ref.current, { y: 300 }, { y: 20, roundProps: 'y' }, 0);
+    if (svgRef.current) {
+      svgRef.current.setAttribute('viewBox', isMobile ? '0 0 1200 1200' : '0 0 1200 800');
+    }
+  }, [isMobile]);
 
-    // .fromTo(layer3Ref.current, { y: 10 }, { y: -550 }, 0)
-    // .fromTo(layer2Ref.current, { y: 495 }, { y: -125 }, 0)
-    // .fromTo(layer1Ref.current, { y: 394 }, { y: -300 }, 0)
-    // .fromTo(cloud1Ref.current, { y: 100 }, { y: -2500, roundProps: 'y' }, 0);
-  }, []);
+  // GSAP ScrollTrigger animation setup that reacts to isMobile
+  useEffect(() => {
+    const mm = gsap.matchMedia();
 
+    const originX = 1200 / 2;
+    const originY = isMobile ? 1200 / 2 : 800 / 2;
+    const origin = `${originX}px ${originY}px`;
+
+    const scaleDTMB = isMobile ? 2.5 : 1.5;
+
+    mm.add("(min-width: 769px)", () => {
+      if (!layer1Ref.current) return;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollDistRef.current,
+          start: 'top top',
+          end: '80% 50%',
+          scrub: 1,
+          markers: true
+        }
+      })
+      .fromTo(layer3Ref.current,
+        {
+          y: -50,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: -75,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(layer2Ref.current,
+        {
+          y: 700,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: 650,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(layer1Ref.current,
+        {
+          y: 550,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: 460,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(cloud1Ref.current,
+        {
+          y: 300,
+          transformOrigin: origin
+        },
+        {
+          y: 20,
+          transformOrigin: origin
+        }, 0);
+
+      return () => tl.kill();
+    });
+
+    mm.add("(max-width: 768px)", () => {
+      if (!layer1Ref.current) return;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollDistRef.current,
+          start: 'top top',
+          end: '80% 50%',
+          scrub: 1,
+          markers: true
+
+        }
+      })
+      .fromTo(layer3Ref.current,
+        {
+          y: 500,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: 150,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(layer2Ref.current,
+        {
+          y: 1750,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: 1450,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(layer1Ref.current,
+        {
+          y: 1500,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: 1150,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0)
+      .fromTo(cloud1Ref.current,
+        {
+          y: 350,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        },
+        {
+          y: -100,
+          scale: scaleDTMB,
+          transformOrigin: origin
+        }, 0);
+      return () => tl.kill();
+    });
+
+
+    return () => mm.revert();
+  }, [isMobile]);
 
   return (
-    <div className="hero-wrapper">
+    <div className="hero-wrapper" ref={heroWrapperRef}>
       <div className="scrollDist" ref={scrollDistRef}></div>
       <section className="hero-parallax">
-        <svg 
-          viewBox="0 0 1200 800"
+        <svg
+          ref={svgRef}
+          viewBox={isMobile ? '0 0 1200 1200' : '0 0 1200 800'}
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid slice"
         >
           <defs>
             <mask id="m">
-              <g className="cloud1" ref={cloud1Ref} transform="translate(600, 400) scale(1) translate(-600, -400)">
-                <rect fill="#fff" width="100%" height="100%" y="1"/>
-                <image href="../../../public/HeroImages/cloudMask.jpg" width="100%" height="100%" />
+              <g className="cloud1" ref={cloud1Ref}>
+                <rect fill="#fff" width="100%" height="100%" y="1" />
+                <image href="/cloudMask.jpg" width="100%" height="100%" />
               </g>
             </mask>
           </defs>
-          
-          <g transform="translate(600, 400) scale(1.5) translate(-600, -400)">
-            <image className="layer_3" ref={layer3Ref} href="../../../public/HeroImages/layer_3.png" width="1200"/>
+
+          <g ref={layer3Ref}>
+            <image className="layer_3" href="/layer_3.png" width="1200" />
           </g>
 
-          <g transform="translate(600, 400) scale(1.5) translate(-600, -400)">
-            <image className="layer_2" ref={layer2Ref} href="../../../public/HeroImages/layer_2.png" width="1200" />
+          <g ref={layer2Ref}>
+            <image className="layer_2" href="/layer_2.png" width="1200" />
           </g>
-        
 
-           <text fill="#fff" x="50%" y="280" textAnchor="middle" dominantBaseline="middle">I LOVE&nbsp; 
-            <tspan fill="#fff">{text}</tspan>{showCursor && <tspan fill="#808080">|</tspan>}
+          <text fill="#fff" x="50%" y={textY} textAnchor="middle" dominantBaseline="middle">
+            I LOVE&nbsp;
+            <tspan fill="#fff">{text}</tspan>
+            {showCursor && <tspan fill="#808080">|</tspan>}
           </text>
 
-          <g transform="translate(600, 400) scale(1.5) translate(-600, -400)">
-            <image className="layer_1" ref={layer1Ref} href=".../../../public/HeroImages/layer_1_2.png" width="1200" />
+          <g ref={layer1Ref}>
+            <image className="layer_1" href="/layer_1_2.png" width="1200" />
           </g>
-          
-           <g mask="url(#m)">
+
+          <g mask="url(#m)">
             <rect fill="#fff" width="100%" height="100%" />
-             {/* <text className="skills" x="50%" y="700" textAnchor="middle" dominantBaseline="middle" fill="#000000">SKILLS</text> */}
+            {/* <text className="skills" x="50%" y="700" textAnchor="middle" dominantBaseline="middle" fill="#000000">SKILLS</text> */}
           </g>
-          
         </svg>
       </section>
     </div>

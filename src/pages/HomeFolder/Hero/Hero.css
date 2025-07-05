@@ -5,6 +5,23 @@
   background:#111b29;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  margin-bottom: -1px;
+
+  opacity: 0; /* start hidden */
+  pointer-events: none; /* disable interactions while hidden */
+  background: #111b29;
+  transition: opacity 0.6s ease-out; /* optional fallback */
+}
+
+.hero-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-wrapper.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.6s ease-out;
 }
 
 .scrollDist {
@@ -31,7 +48,7 @@
   backface-visibility: hidden;
 }
 .hero-parallax text {
-  font-size: calc(var(--vwFW) * 5);
+  font-size: calc(var(--vwFW) * 4);
   margin-right: calc(var(--vwFW) * 1);
 }
 
@@ -44,7 +61,7 @@
 
 @media (max-width: 768px) {
   .hero-parallax text {
-    font-size: calc(var(--vwFW) * 5);
+    font-size: calc(var(--vwFW) * 18);
   }
 
 }
