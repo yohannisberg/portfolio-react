@@ -1,133 +1,55 @@
 import './Skills.css'
 
-
 const Skills = () => {
+  const skillsData = [
+    { class:"react", image: '/React-icon.png', alt: 'React Logo', name: 'React' },
+    { class:"js", image: '/javascript.svg', alt: 'JavaScript Logo', name: 'JavaScript' },
+    { class:"html", image: '/html5-color.svg', alt: 'HTML5 Logo', name: 'HTML5' },
+    { class:"css", image: '/css3-color.svg', alt: 'CSS3 Logo', name: 'CSS3' },
+    { class:"figma", image: '/Figma-logo.svg', alt: 'Figma Logo', name: 'Figma'},
+    { class:"ajs", image: '/angular-color.svg', alt: 'AngularJS Logo', name: 'AngularJS' },
+    { class:"npm", image: '/Npm-logo.svg', alt: 'NPM Logo', name: 'NPM' },
+    { class:"node", image: '/nodejs.svg', alt: 'Node.JS Logo', name: 'Node.JS' },
+    { class:"git", image: '/git.svg', alt: 'Git Logo', name: 'Git' },
+    { class:"sql", image: '/Postgres.svg', alt: 'SQL Logo', name: 'SQL' },
+    { class:"express", image: '/express.png', alt: 'Express.JS Logo', name: 'Express.JS' },
+    { class:"gulp", image: '/gulp.svg', alt: 'Gulp Logo', name: 'Gulp' },
+    { class:"php", image: '/PHP-logo.svg', alt: 'PHP Logo', name: 'PHP' },
+    { class:"jquery", image: '/jquery-icon.png', alt: 'jQuery Logo', name: 'jQuery' },
+    { class:"wp", image: '/wordpress.svg', alt: 'Wordpress Logo', name: 'Wordpress' },
+    { class:"sass", image: '/sass2.png', alt: 'Sass Logo', name: 'Sass' },
+    { class:"bootstrap", image: '/Boostrap_logo.svg', alt: 'Bootstrap Logo', name: 'Bootstrap' },
+    { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
+    { class:"photoshop", image: '/pscs6.png', alt: 'Adobe Photoshop Logo', name: 'Photoshop' },
+    { class:"brackets", image: '/coding.png', alt: 'Brackets', name: '(More to come!)' },
+  ];
+
   return (
     <>
-      <section id="about" className="skills-wrapper bg-white">
-        <div className="container">
-          <div className="">
-            <div className="col-lg-12 text-center">
-                <h2 className="section-heading">Skills</h2>
-            </div>
+      <section id="about" className="portfolio-comp skills-wrapper bg-white">
+        <div className="max-1280">
 
-            <div className= "langIconWrapper">
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/React-icon.png" alt="React Logo"/>
-                </div>
-                <div className="iconSub">React</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/javascript.svg" alt="JavaScript Logo" />
-                </div>
-                <div className="iconSub">JavaScript</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/html5-color.svg" alt="HTML5 Logo" />
-                </div>
-                <div className="iconSub">HTML5</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/css3-color.svg" alt="CSS3 Logo" />
-                </div>
-                <div className="iconSub">CSS3</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80 showcase-inner" src="../../public/angular-color.svg" alt="AngularJS Logo" />
-                </div>
-                <div className="iconSub">AngularJS</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/Npm-logo.svg" alt="NPM Logo" />
-                </div>
-                <div className="iconSub">NPM</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/nodejs.svg" alt="Node.JS Logo" />
-                </div>
-                <div className="iconSub">Node.JS</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/git.svg" alt="Git Logo" />
-                </div>
-                <div className="iconSub">Git</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/Postgres.svg" alt="SQL Logo" />
-                </div>
-                <div className="iconSub">SQL</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/express.png" alt="Express.JS Logo" />
-                </div>
-                <div className="iconSub">Express.JS</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon35" src="../../public/gulp.svg" alt="Gulp Logo" />
-                </div>
-                <div className="iconSub">Gulp</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/PHP-logo.svg" alt="PHP Logo" />
-                </div>
-                <div className="iconSub">PHP</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/jquery-icon.png" alt="jQuery Logo" />
-                </div>
-                <div className="iconSub">jQuery</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/Wordpress.svg" alt="AngularJS Logo" />
-                </div>
-                <div className="iconSub">Wordpress</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/sass2.png" alt="Sass Logo" />
-                </div>
-                <div className="iconSub">Sass</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/Boostrap_logo.svg" alt="Bootstrap Logo" />
-                </div>
-                <div className="iconSub">Bootstrap</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/pscs6.png" alt="Photoshop Logo" />
-                </div>
-                <div className="iconSub">Adobe Photoshop</div>
-              </div>
-              <div className="langIconWrap">
-                <div className='imgWrapper'>
-                <img className="langIcon80" src="../../public/coding.png" alt="Brackets" />
-                </div>
-                <div className="iconSub">(More to come!)</div>
-              </div>
-
-            </div>
-                
+          <div className="header-wrap text-center">
+            <h2 className="section-heading">Skills</h2>
           </div>
+
+          <div className= "skills-icons-wrapper">
+
+            {skillsData.map((data) => (
+              <div className="skills-icon">
+                <div className={`image-wrapper ${data.class}`}>
+                  <img className="image" src={data.image} alt={data.alt} />
+                </div>
+                <p>{data.name}</p>
+              </div>
+            ))}
+
+          </div>
+                
         </div>
       </section>
 
-      <div className="" data-parallax="scroll" data-image-src="../../public/background1.JPG"></div>
+      <div className="" data-parallax="scroll" data-image-src="/background1.JPG"></div>
     </>
   )
 };

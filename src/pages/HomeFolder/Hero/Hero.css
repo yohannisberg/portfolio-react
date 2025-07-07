@@ -1,5 +1,5 @@
 .hero-wrapper {
-  /* position: relative; */
+  position: relative;
   width:100%;
   height:100%;
   background:#111b29;
@@ -25,7 +25,7 @@
 }
 
 .scrollDist {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
@@ -60,6 +60,13 @@
 }
 
 @media (max-width: 768px) {
+  .scrollDist {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
   .hero-parallax text {
     font-size: calc(var(--vwFW) * 18);
   }

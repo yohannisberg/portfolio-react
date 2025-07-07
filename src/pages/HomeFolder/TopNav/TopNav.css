@@ -26,7 +26,7 @@
   padding-bottom: calc(var(--vw) * 1.1);
 }
 .navbar-custom.scrolled .navbar-brand {
-  font-size: calc(var(--vw)*1.55);
+  font-size: calc(var(--vw)*2.1);
 }
 
 @media (max-width: 991px) {

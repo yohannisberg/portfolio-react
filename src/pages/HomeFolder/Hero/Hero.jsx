@@ -49,7 +49,6 @@ const Hero = () => {
     }, 50);
   }, []);
 
-
   // Update isMobile and textY on resize, refresh ScrollTrigger
   useEffect(() => {
     const handleResize = () => {
@@ -115,7 +114,7 @@ const Hero = () => {
           start: 'top top',
           end: '80% 50%',
           scrub: 1,
-          markers: true
+          // markers: true
         }
       })
       .fromTo(layer3Ref.current,
@@ -131,12 +130,12 @@ const Hero = () => {
         }, 0)
       .fromTo(layer2Ref.current,
         {
-          y: 700,
+          y: 730,
           scale: scaleDTMB,
           transformOrigin: origin
         },
         {
-          y: 650,
+          y: 660,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
@@ -153,12 +152,17 @@ const Hero = () => {
         }, 0)
       .fromTo(cloud1Ref.current,
         {
-          y: 300,
-          transformOrigin: origin
+          y: 200,
+          scale: 1.2,
+          transformOrigin: origin,
+          rotation: -6
+
         },
         {
           y: 20,
-          transformOrigin: origin
+          scale: 1,
+          transformOrigin: origin,
+          rotation: 0
         }, 0);
 
       return () => tl.kill();
@@ -173,8 +177,7 @@ const Hero = () => {
           start: 'top top',
           end: '80% 50%',
           scrub: 1,
-          markers: true
-
+          // markers: true
         }
       })
       .fromTo(layer3Ref.current,
@@ -223,8 +226,6 @@ const Hero = () => {
         }, 0);
       return () => tl.kill();
     });
-
-
     return () => mm.revert();
   }, [isMobile]);
 
@@ -252,7 +253,7 @@ const Hero = () => {
           </g>
 
           <g ref={layer2Ref}>
-            <image className="layer_2" href="/layer_2.png" width="1200" />
+            <image className="layer_2" href="/layer_2_2.png" width="1200" />
           </g>
 
           <text fill="#fff" x="50%" y={textY} textAnchor="middle" dominantBaseline="middle">
