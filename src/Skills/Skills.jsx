@@ -1,6 +1,22 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './Skills.css'
 
 const Skills = () => {
+
+  var settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+    centerPadding:0,
+  };
+
   const skillsData = [
     { class:"react", image: '/React-icon.png', alt: 'React Logo', name: 'React' },
     { class:"js", image: '/javascript.svg', alt: 'JavaScript Logo', name: 'JavaScript' },
@@ -27,25 +43,36 @@ const Skills = () => {
   return (
     <>
       <section id="about" className="portfolio-comp skills-wrapper bg-white">
+        <img className="cloudBorder1" src="/cloud-border.png" alt="Cloud" />
+
         <div className="max-1280">
 
           <div className="header-wrap text-center">
             <h2 className="section-heading">Skills</h2>
           </div>
 
-          <div className= "skills-icons-wrapper">
-
-            {skillsData.map((data) => (
-              <div className="skills-icon">
+          <Slider {...settings} className="skills-icons-wrapper mobile-only-jd">
+            {skillsData.map((data, index) => (
+              <div key={index} className="skills-icon">
                 <div className={`image-wrapper ${data.class}`}>
                   <img className="image" src={data.image} alt={data.alt} />
                 </div>
                 <p>{data.name}</p>
               </div>
             ))}
+          </Slider>
 
+          <div className="skills-icons-wrapper desktop-only-jd">
+            {skillsData.map((data, index) => (
+              <div key={index} className="skills-icon">
+                <div className={`image-wrapper ${data.class}`}>
+                  <img className="image" src={data.image} alt={data.alt} />
+                </div>
+                <p>{data.name}</p>
+              </div>
+            ))}
           </div>
-                
+
         </div>
       </section>
 

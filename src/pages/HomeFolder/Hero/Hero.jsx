@@ -152,11 +152,10 @@ const Hero = () => {
         }, 0)
       .fromTo(cloud1Ref.current,
         {
-          y: 200,
+          y: 290,
           scale: 1.2,
           transformOrigin: origin,
-          rotation: -6
-
+          rotation: -10
         },
         {
           y: 20,
