@@ -214,7 +214,7 @@ const Hero = () => {
         }, 0)
       .fromTo(cloud1Ref.current,
         {
-          y: 350,
+          y: 375,
           scale: scaleDTMB,
           transformOrigin: origin
         },

@@ -6,13 +6,12 @@ import './Skills.css'
 const Skills = () => {
 
   var settings = {
-    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
     arrows: true,
     dots: false,
-    infinite: true,
-    centerMode: true,
+    infinite: false,
+    centerMode: false,
     variableWidth: true,
     centerPadding:0,
   };
