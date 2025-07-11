@@ -14,7 +14,7 @@ const Hero = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const [textY, setTextY] = useState(isMobile ? 420 : 280);
+  const [textY, setTextY] = useState(isMobile ? 450 : 280);
 
   const scrollDistRef = useRef(null);
   const layer1Ref = useRef(null);
@@ -91,7 +91,7 @@ const Hero = () => {
   // Update SVG viewBox based on isMobile
   useEffect(() => {
     if (svgRef.current) {
-      svgRef.current.setAttribute('viewBox', isMobile ? '0 0 1200 1200' : '0 0 1200 800');
+      svgRef.current.setAttribute('viewBox', isMobile ? '0 0 1200 1800' : '0 0 1200 800');
     }
   }, [isMobile]);
 
@@ -214,12 +214,12 @@ const Hero = () => {
         }, 0)
       .fromTo(cloud1Ref.current,
         {
-          y: 375,
+          y: -300,
           scale: scaleDTMB,
           transformOrigin: origin
         },
         {
-          y: -100,
+          y: -750,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0);
@@ -234,7 +234,7 @@ const Hero = () => {
       <section className="hero-parallax">
         <svg
           ref={svgRef}
-          viewBox={isMobile ? '0 0 1200 1200' : '0 0 1200 800'}
+          viewBox={isMobile ? '0 0 1200 1800' : '0 0 1200 800'}
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid slice"
         >

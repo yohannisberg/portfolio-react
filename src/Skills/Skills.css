@@ -5,11 +5,35 @@
   padding-bottom: calc(var(--vw) * 4);
 }
 
-.skills-wrapper .cloudBorder1 {
-  position: absolute;
-  top: calc(var(--vw) * -3.8);
+/* Cloud Wrap - Global */
+.skills-wrapper .cloudBorderWrap {
+  position: absolute; 
   width: 100%;
+  overflow: hidden;
   z-index: -1;
+}
+
+/* Cloud Wrap - Top */
+.skills-wrapper .cloudBorderWrap.top {
+  top: calc(var(--vw) * -6.6);
+  z-index: -1;
+}
+/* Cloud Wrap - Bottom */
+.skills-wrapper .cloudBorderWrap.bottom {
+  bottom: calc(var(--vw) * -6.6);
+  transform: rotate(180deg);
+}
+/* Cloud Image - Top */
+.skills-wrapper .cloudBorderTop {
+  position: relative;
+  width: 163%;
+  left: -62%;
+}
+/* Cloud Image - Bottom */
+.skills-wrapper .cloudBorderBottom {
+  position: relative;
+  width: 163%;
+  left: -62%;
 }
 
 .skills-wrapper .skills-icons-wrapper {

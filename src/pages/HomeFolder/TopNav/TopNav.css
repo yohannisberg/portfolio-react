@@ -28,6 +28,13 @@
 .navbar-custom.scrolled .navbar-brand {
   font-size: calc(var(--vw)*2.1);
 }
+.navbar-brand:focus, .navbar-brand:hover {
+  color: #ffffff;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 @media (max-width: 991px) {
   .navbar-custom {
