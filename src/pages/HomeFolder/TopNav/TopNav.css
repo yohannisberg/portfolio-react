@@ -21,7 +21,7 @@
 }
 
 .navbar-custom.scrolled {
-  background-color: #65afff;
+  background-color: var(--blueJD);
   padding-top: calc(var(--vw) * 1.1);
   padding-bottom: calc(var(--vw) * 1.1);
 }
@@ -31,7 +31,7 @@
 
 @media (max-width: 991px) {
   .navbar-custom {
-    background-color: #65afff;
+    background-color: var(--blueJD);
   }
   .navbar-custom .container {
     max-width: 900px;

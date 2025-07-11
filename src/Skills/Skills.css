@@ -9,6 +9,7 @@
   position: absolute;
   top: calc(var(--vw) * -3.8);
   width: 100%;
+  z-index: -1;
 }
 
 .skills-wrapper .skills-icons-wrapper {
@@ -48,11 +49,13 @@
 
   .skills-wrapper .skills-icons-wrapper {
     display: block;
+    padding: 0;
   }
   .skills-wrapper .skills-icons-wrapper .slick-slide {
-    width: calc(var(--vw) * 27);
-    margin-left: calc(var(--vw) * 2);
-    margin-right: calc(var(--vw) * .5);
+    width: calc(var(--vw) * 26);
+    margin-left: calc(var(--vw) * 3);
+    margin-right: calc(var(--vw) * 0);
+    padding: 0 calc(var(--vw) * 3);
   }
   .skills-wrapper .skills-icons-wrapper .skills-icon {
     width: 23.75%;
@@ -60,15 +63,45 @@
   }
   .skills-wrapper .skills-icons-wrapper .skills-icon .image-wrapper {
     height: calc(var(--vw) * 27);
-    margin-bottom: calc(var(--vw) * 4);
+    margin-bottom: calc(var(--vw) * 3);
   }   
   .skills-wrapper .skills-icons-wrapper .skills-icon .image-wrapper .image {
     max-width: calc(var(--vw) * 30);
-    width: 100%;
+    max-width: 100%;
   }
 
   .skills-wrapper .skills-icons-wrapper .skills-icon p {
     margin-bottom: calc(var(--vw) * 1);
     font-size: calc(var(--vw) * 3.75);
+  }
+
+  .skills-wrapper .skills-icons-wrapper .slick-arrow {
+    margin-top: 0;
+    height: calc(var(--vw) * 6);
+    width: calc(var(--vw) * 6);
+    top: auto;
+    bottom: calc(var(--vw) * 0);
+    border-radius: 50%;
+  }
+  .skills-wrapper  .skills-icons-wrapper .slick-prev {
+    z-index: 1;
+    left: calc(var(--vw) * 18);
+    right: auto;
+    transform: rotate(-135deg);
+  }
+  .skills-wrapper  .skills-icons-wrapper .slick-next {
+    left: auto;
+    right: calc(var(--vw) * 18);
+    transform: rotate(45deg);
+  }
+  .skills-wrapper .skills-icons-wrapper .slick-prev:before,
+  .skills-wrapper .skills-icons-wrapper .slick-next:before {
+    content: '';
+    display: inline-block;
+    border-style: solid;
+    border-width: calc(var(--vw) * .6) calc(var(--vw) * .6) 0 0;
+    width: calc(var(--vw) * 3.8);
+    height: calc(var(--vw) * 3.8);
+    color: #000000;
   }
 }

@@ -13,6 +13,8 @@
 :root {
   --vw: 1vw;
   --vwFW: 1vw;
+
+  --blueJD: #65afff;
 }
 /* 1280px = 80em */
 /* 1200px = 75em */
@@ -62,6 +64,6 @@ section h2.section-heading {
 @media (max-width: 768px) {
   section h2.section-heading {
     font-size: calc(var(--vw) * 14);
-    margin-bottom: calc(var(--vw) * 6.5);
+    margin-bottom: calc(var(--vw) * 5);
   }
 }
