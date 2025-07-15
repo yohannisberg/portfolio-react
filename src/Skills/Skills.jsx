@@ -43,13 +43,13 @@ const Skills = () => {
     <>
       <section id="about" className="portfolio-comp skills-wrapper bg-white">
 
-        <div class="cloudBorderWrap top">
+        <div className="cloudBorderWrap top">
           <img className="cloudBorderTop" src="/cloud-border.png" alt="Cloud" />
         </div>
 
 
-        <div class="cloudBorderWrap bottom">
-          <img className="cloudBorderBottom" src="/cloud-border.png" alt="Cloud" />
+        <div className="cloudBorderWrap bottom">
+          <img className="cloudBorderBottom" src="/cloud-border-bottom-2.png" alt="Cloud" />
         </div>
 
         <div className="max-1280">

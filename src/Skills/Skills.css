@@ -20,8 +20,7 @@
 }
 /* Cloud Wrap - Bottom */
 .skills-wrapper .cloudBorderWrap.bottom {
-  bottom: calc(var(--vw) * -6.6);
-  transform: rotate(180deg);
+  bottom: calc(var(--vw) * -11);
 }
 /* Cloud Image - Top */
 .skills-wrapper .cloudBorderTop {
@@ -32,8 +31,8 @@
 /* Cloud Image - Bottom */
 .skills-wrapper .cloudBorderBottom {
   position: relative;
-  width: 163%;
-  left: -62%;
+  width: 137%;
+  left: 0%;
 }
 
 .skills-wrapper .skills-icons-wrapper {
