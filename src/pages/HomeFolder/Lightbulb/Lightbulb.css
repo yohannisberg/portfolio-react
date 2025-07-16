@@ -12,19 +12,16 @@
 
   --dayOpacity: 1;
   --nightOpacity: 0;
-}
- .about-lightbulb {
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg);
-  /* background: #031136; */
+
+  --blackWhite: #000000;
 }
  .toggle-scene {
-	overflow: visible !important;
-	height: calc(var(--vw) * 22);
-	position: absolute;
+  overflow: visible !important;
+  height: calc(var(--vw) * 22);
+  position: absolute;
+  top: calc(var(--vw) * -1.6);
+  right: calc(var(--vw) * -6.25);
+  width: calc(var(--vw) * 5.5);
 }
  .toggle-scene__cord {
 	stroke: var(--cord);
@@ -68,22 +65,54 @@
 	stroke: var(--stroke);
 }
 
-/* About Day - Start */
-.about-lightbulb .about-day-wrapper {
-  opacity: var(--dayOpacity);
+/* About - JD Styles */
+ .about-lightbulb {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+  padding-top: calc(var(--vw) * 13);
+}
+
+.about-lightbulb .header-wrap {
+  position: relative;
+  z-index: 1;
+}
+.about-lightbulb .header-wrap .section-heading {
+  color: var(--blackWhite);
+  
+}
+
+.about-lightbulb .about-cat-wrapper {
+  position: relative;
+  height: calc(var(--vw) * 13);
+  background-color: pink;
+}
+
+.about-lightbulb .about-cat-wrapper .about-day-wrapper,
+.about-lightbulb .about-cat-wrapper .about-night-wrapper {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
-  right: 250px;
+}
+/* About Day - Start */
+.about-lightbulb .about-cat-wrapper .about-day-wrapper {
+  opacity: var(--dayOpacity);
 }
 /* About Day - End */
 
 /* About Night - Start */
-.about-lightbulb .about-night-wrapper {
+.about-lightbulb .about-cat-wrapper .about-night-wrapper {
   opacity: var(--nightOpacity);
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  right: 100px
+}
+.about-lightbulb .about-cat-wrapper .about-night-wrapper p,
+.about-lightbulb .about-cat-wrapper .about-night-wrapper path {
+  color: #ffffff;
 }
 /* About Night - End */

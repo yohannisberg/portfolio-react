@@ -4,6 +4,18 @@ import { gsap } from 'gsap';
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import { Draggable } from 'gsap/Draggable';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faHiking } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+
+import { faBed } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+
+
+
 // Register plugins
 gsap.registerPlugin(MorphSVGPlugin, Draggable);
 
@@ -34,6 +46,8 @@ const Lightbulb = () => {
     let dayOpacity = 1;
     let nightOpacity = 0;
 
+    let blackWhite = 1;
+
     const RESET = () => {
       gsap.set(PROXY, { x: ENDX, y: ENDY });
     };
@@ -50,6 +64,10 @@ const Lightbulb = () => {
         nightOpacity = !nightOpacity;
         gsap.set(document.documentElement, { '--dayOpacity': dayOpacity ? 1 : 0 });
         gsap.set(document.documentElement, { '--nightOpacity': nightOpacity ? 1 : 0 });
+        
+        blackWhite = !blackWhite;
+        gsap.set(document.documentElement, { '--blackWhite': blackWhite ? '#000000' : '#ffffff' });
+
 
         gsap.set([DUMMY, HIT], { display: 'none' });
         gsap.set(CORDS[0], { display: 'block' });
@@ -108,9 +126,9 @@ const Lightbulb = () => {
   }, []);
 
   return (
-    <div className="about-lightbulb" ref={containerRef}>
+    <section className="about-lightbulb" ref={containerRef}>
 
-      <div class="header-wrap text-center">
+      <div className="header-wrap text-center">
       
         <svg className="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 197.451 481.081">
           <defs>
@@ -162,36 +180,69 @@ const Lightbulb = () => {
           </g>
         </svg>
 
-        <h2 class="section-heading">About</h2>
+        <h2 className="section-heading">About</h2>
 
       </div>
 
 
+      <div className="about-cat-wrapper">
+        <div className="about-day-wrapper">
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faCode} />
+              <p className="title">Coding</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
 
-      <div className="about-day-wrapper">
-        
-        <div className="skill-wrap">
-            <span className="fa-stack fa-4x">
-              <i className="fa fa-code fa-1x about-icons"></i>
-            </span>
-            <h4 className="service-heading">DAY</h4>
-            <p className="text-muted">ELEMENT</p>
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faMusic} />
+              <p className="title">Music</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faHiking} />
+
+              <p className="title">Hiking</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faUtensils} />
+              <p className="title">Cooking</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+
+        </div>
+
+        <div className="about-night-wrapper">
+
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faBook} />
+              <p className="title">Reading</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faBed} />
+              <p className="title">Sleeping</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faFilm} />
+
+              <p className="title">Movies</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+          <div className="skill-wrap">
+              <FontAwesomeIcon icon={faUtensils} />
+              <p className="title">Moose Tracks</p>
+              <p className="subcopy">Subcopy</p>
+          </div>
+
         </div>
       </div>
 
-
-      <div className="about-night-wrapper">
-        
-        <div className="skill-wrap">
-            <span className="fa-stack fa-4x">
-              <i className="fa fa-code fa-1x about-icons"></i>
-            </span>
-            <h4 className="service-heading">NIGHT</h4>
-            <p className="text-muted">ELEMENT</p>
-        </div>
-      </div>
-
-    </div>
+    </section>
   );
 };
 
