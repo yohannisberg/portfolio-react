@@ -49,10 +49,6 @@
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.portfolio-comp .header-wrap {
-  width: 100%;
-}
-
 section h2.section-heading {
   font-size: calc(var(--vw) * 4.297);
   text-transform: uppercase;

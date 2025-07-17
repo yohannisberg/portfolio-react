@@ -208,7 +208,7 @@ const Hero = () => {
           transformOrigin: origin
         },
         {
-          y: 1150,
+          y: 1050,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
@@ -219,9 +219,16 @@ const Hero = () => {
           transformOrigin: origin
         },
         {
-          y: -750,
+          y: -850,
           scale: scaleDTMB,
           transformOrigin: origin
+        }, 0)
+      .fromTo(heroWrapperRef.current,
+        {
+          marginBottom: 0,
+        },
+        {
+          marginBottom: -200,
         }, 0);
       return () => tl.kill();
     });

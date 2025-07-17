@@ -18,13 +18,14 @@ const Skills = () => {
 
   const skillsData = [
     { class:"react", image: '/React-icon.png', alt: 'React Logo', name: 'React' },
-    { class:"js", image: '/javascript.svg', alt: 'JavaScript Logo', name: 'JavaScript' },
     { class:"html", image: '/html5-color.svg', alt: 'HTML5 Logo', name: 'HTML5' },
     { class:"css", image: '/css3-color.svg', alt: 'CSS3 Logo', name: 'CSS3' },
+    { class:"js", image: '/javascript.svg', alt: 'JavaScript Logo', name: 'JavaScript' },
     { class:"figma", image: '/Figma-logo.svg', alt: 'Figma Logo', name: 'Figma'},
     { class:"ajs", image: '/angular-color.svg', alt: 'AngularJS Logo', name: 'AngularJS' },
     { class:"npm", image: '/Npm-logo.svg', alt: 'NPM Logo', name: 'NPM' },
     { class:"node", image: '/nodejs.svg', alt: 'Node.JS Logo', name: 'Node.JS' },
+    { class:"greensock", image: '/greensock.png', alt: 'Greensock Logo', name: 'GSAP' },
     { class:"git", image: '/git.svg', alt: 'Git Logo', name: 'Git' },
     { class:"sql", image: '/Postgres.svg', alt: 'SQL Logo', name: 'SQL' },
     { class:"express", image: '/express.png', alt: 'Express.JS Logo', name: 'Express.JS' },
@@ -34,7 +35,7 @@ const Skills = () => {
     { class:"wp", image: '/wordpress.svg', alt: 'Wordpress Logo', name: 'Wordpress' },
     { class:"sass", image: '/sass2.png', alt: 'Sass Logo', name: 'Sass' },
     { class:"bootstrap", image: '/Boostrap_logo.svg', alt: 'Bootstrap Logo', name: 'Bootstrap' },
-    { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
+    // { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
     { class:"photoshop", image: '/pscs6.png', alt: 'Adobe Photoshop Logo', name: 'Photoshop' },
     { class:"brackets", image: '/coding.png', alt: 'Brackets', name: '(More to come!)' },
   ];
