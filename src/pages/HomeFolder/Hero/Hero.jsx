@@ -228,7 +228,7 @@ const Hero = () => {
           marginBottom: 0,
         },
         {
-          marginBottom: -200,
+          marginBottom: -325,
         }, 0);
       return () => tl.kill();
     });

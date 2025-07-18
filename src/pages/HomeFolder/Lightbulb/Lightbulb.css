@@ -1,3 +1,4 @@
+
 * {
 	box-sizing: border-box;
 }
@@ -90,7 +91,7 @@
 }
 .about-lightbulb .header-wrap .section-heading {
   color: var(--blackWhite);
-  margin-bottom: calc(var(--vw) * 3.7);
+  margin-bottom: calc(var(--vw) * 3.8);
 }
 
 .about-lightbulb .header-wrap .pull-arrow-wrapper {
@@ -147,26 +148,6 @@
   z-index: 1;
 }
 
-.about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper .glow {
-  z-index: 0;
-  position: absolute;
-  display: block;
-  top:0;
-  left:0;
-  right:0;
-  margin: 0 auto;
-  border-radius: 50%;
-  box-shadow: 0px 0px calc(var(--vw) * .5) calc(var(--vw) * .25) #ffffff;
-  animation: glow 1.8s linear infinite alternate;
-  height: calc(var(--vw) * 5);
-  width: calc(var(--vw) * 7);
-}
-
-@keyframes glow{
-  to {
-    box-shadow: 0px 0px calc(var(--vw) * 1.3) calc(var(--vw) * 1.6) var(--blueJD);
-  }
-}
 .about-lightbulb .about-cat-wrapper .skill-wrap .title {
   font-weight: 600;
   font-size: calc(var(--vw) * 1.4);
@@ -177,6 +158,13 @@
   line-height: 1.5;
   text-align: center;
   font-size: calc(var(--vw) * 1.1);
+}
+.about-lightbulb .about-cat-wrapper .skill-wrap .subcopy a {
+  color: inherit;
+}
+.about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
+  margin-right: calc(var(--vw) * .2);
+  height: calc(var(--vw) * 1.5);
 }
 
 .about-lightbulb .about-cat-wrapper .about-day-wrapper,
@@ -193,6 +181,7 @@
 /* About Day - Start */
 .about-lightbulb .about-cat-wrapper .about-day-wrapper {
   opacity: var(--dayOpacity);
+  
 }
 .about-lightbulb .about-cat-wrapper .about-night-wrapper p {
   color: #404040;
@@ -208,6 +197,40 @@
 .about-lightbulb .about-cat-wrapper .about-night-wrapper path {
   color: #ffffff;
 }
+
+.about-lightbulb .about-cat-wrapper .neon {
+  font-size:calc(var(--vw) * 3.1);
+  text-align: center;
+  color: var(--blueJD);
+  position: absolute;
+  text-align: center;
+  line-height: 1.1;
+  right: calc(var(--vw) * -1);
+  top: calc(var(--vw) * -11);
+  transform: rotate(5deg);
+  font-weight: 100;
+  letter-spacing: calc(var(--vw) * 0.1);
+  text-shadow: 1px 0px 4px var(--blueJD), 2px 0px 4px var(--blueJD), 3px 0px 4px var(--blueJD), 2px 0px 3px var(--blueJD), 2px 3px 15px var(--blueJD), 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px var(--blueJD),40px 0vw 200px var(--blueJD);
+}
+
+.about-lightbulb .about-cat-wrapper .flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.about-lightbulb .about-cat-wrapper .flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+
+
 /* About Night - End */
 
 @media only screen and (max-width:48em) {
@@ -216,21 +239,15 @@
     right: calc(var(--vw) * 9.5);
     width: calc(var(--vw) * 17.5);
   }
-  .about-lightbulb .about-cat-wrapper .skill-wrap {
-    width: calc(var(--vw) * 50);
-    padding: 0 calc(var(--vw) * 1.25);
+  .about-lightbulb {
+    padding-bottom: calc(var(--vw) * 10);
   }
-
-  .about-lightbulb .about-cat-wrapper .about-day-wrapper,
-  .about-lightbulb .about-cat-wrapper .about-night-wrapper {
-    flex-wrap: wrap;
-  }
-
   .about-lightbulb .header-wrap {
-    padding-left: calc(var(--vw) * 2);
+    padding-left: calc(var(--vw) * 1.5);
   }
   .about-lightbulb .header-wrap .section-heading {
     text-align: left;
+    margin-bottom: calc(var(--vw) * 7.5);
   }
   .about-lightbulb .header-wrap .pull-arrow-wrapper {
     top: calc(var(--vw) * 10);
@@ -243,6 +260,50 @@
   .about-lightbulb .header-wrap .pull-arrow-wrapper .arrow {
     left: calc(var(--vw) * -2);
     width: calc(var(--vw) * 7);
+  }
+
+  .about-lightbulb .about-cat-wrapper {
+    height: calc(var(--vw) * 100)
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap {
+    width: 50%;
+    padding: 0 calc(var(--vw) * 1.25);
+    margin-bottom: calc(var(--vw) * 8);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .svg-inline--fa,
+  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper {
+    height: calc(var(--vw) * 12.5);
+    margin-bottom: calc(var(--vw) * 2);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper img {
+    height: calc(var(--vw) * 22);
+    top: calc(var(--vw) * -7.75);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .title {
+    text-align: center;
+    font-size: calc(var(--vw) * 4.5);
+    margin-bottom: calc(var(--vw) * 1.1);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy {
+    font-size: calc(var(--vw) * 3.2);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
+    margin-right: calc(var(--vw) * 1);
+    margin-left: calc(var(--vw) * -1);
+    height: calc(var(--vw) * 5);
+  }
+  .about-lightbulb .about-cat-wrapper .about-day-wrapper,
+  .about-lightbulb .about-cat-wrapper .about-night-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-lightbulb .about-cat-wrapper .neon {
+    right: auto;
+    left: calc(var(--vw) * 47);
+    transform: rotate(-5deg);
+    font-size: calc(var(--vw) * 4.75);
+    top: calc(var(--vw) * -17);
   }
 
 }

@@ -215,46 +215,46 @@ const Lightbulb = () => {
             <div className="skill-wrap">
                 <FontAwesomeIcon icon={faHiking} />
                 <p className="title">Hiking</p>
-                <p className="subcopy">There’s nothing like fresh air and a good trail to reset and&nbsp;recharge.</p>
+                <p className="subcopy">There’s nothing like fresh&nbsp;air and a good trail to reset and&nbsp;recharge.</p>
             </div>
 
             <div className="skill-wrap">
                 <FontAwesomeIcon icon={faMusic} />
                 <p className="title">Music</p>
-                <p className="subcopy">I'm a singer/songwriter, but don't worry, you won't catch me singing to&nbsp;myself.</p>
+                <p className="subcopy">I'm a singer/songwriter, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
             </div>
 
           </div>
 
           <div className="about-night-wrapper">
 
+            <p className="neon" data-text="U">AF<span className="flicker-slow">T</span>ER <br />DA<span className="flicker-fast">R</span>K</p>
+
             <div className="skill-wrap">
                 <FontAwesomeIcon icon={faBook} />
                 <p className="title">Reading</p>
-                <p className="subcopy">I usually enjoy autobiographies, but&nbsp;lately I’ve been journeying through Middle&nbsp;Earth.</p>
+                <p className="subcopy">I usually enjoy autobiographies, but lately I’ve been journeying through Middle&nbsp;Earth.</p>
             </div>
 
             <div className="skill-wrap">
                 <FontAwesomeIcon icon={faFilm} />
 
                 <p className="title">Watching Movies</p>
-                <p className="subcopy">I have a soft spot for old noir&nbsp;films.</p>
+                <p className="subcopy">I have a soft spot for old&nbsp;noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img class="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
             </div>
 
             <div className="skill-wrap">
                 <FontAwesomeIcon icon={faBed} />
                 <p className="title">Sleeping</p>
-                <p className="subcopy">A full night's sleep keeps me at my&nbsp;best.</p>
+                <p className="subcopy">A full night's sleep keeps&nbsp;me at my&nbsp;best.</p>
             </div>
-
 
             <div className="skill-wrap">
                 <div className="mTWrapper">
                   <img src="/mooseTracks.png" />
-                  <div className="glow"></div>
                 </div>
                 <p className="title">Moose Tracks</p>
-                <p className="subcopy">There's nothing better than Moose Tracks Ice&nbsp;Cream.</p>
+                <p className="subcopy">There's nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
             </div>
 
           </div>
