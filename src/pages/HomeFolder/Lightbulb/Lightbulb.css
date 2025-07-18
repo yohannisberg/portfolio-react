@@ -1,309 +1,48 @@
-
-* {
-	box-sizing: border-box;
-}
- :root {
-  --on: 1;
-  /* --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%)); */
-  --bg: hsl(calc(200 - (var(--on) * 160)), calc((40 + (var(--on) * 50)) * 1%), calc((13 + (var(--on) * 60)) * 1%));
-  --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
-  /* --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%)); */
-  --cap: var(--blueJD);
-  --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
-
-  --dayOpacity: 1;
-  --nightOpacity: 0;
-
-  --blackWhite: #000000;
-}
- .toggle-scene {
+.toggle-scene {
   overflow: visible !important;
   position: absolute;
   top: calc(var(--vw) * -1.4);
   right: calc(var(--vw) * -7);
   width: calc(var(--vw) * 4.5);
 }
- .toggle-scene__cord {
+.toggle-scene__cord {
 	stroke: var(--cord);
 	cursor: move;
 }
- .toggle-scene__cord:nth-of-type(1) {
+.toggle-scene__cord:nth-of-type(1) {
 	display: none;
 }
- .toggle-scene__cord:nth-of-type(2), .toggle-scene__cord:nth-of-type(3), .toggle-scene__cord:nth-of-type(4), .toggle-scene__cord:nth-of-type(5) {
+.toggle-scene__cord:nth-of-type(2), .toggle-scene__cord:nth-of-type(3), .toggle-scene__cord:nth-of-type(4), .toggle-scene__cord:nth-of-type(5) {
 	display: none;
 }
  .toggle-scene__cord-end {
 	stroke: var(--cord);
 	fill: var(--cord);
 }
- .toggle-scene__dummy-cord {
+.toggle-scene__dummy-cord {
 	stroke-width: 6;
 	stroke: var(--cord);
 }
- .bulb__filament {
+.bulb__filament {
 	stroke: var(--filament);
 }
- .bulb__shine {
+.bulb__shine {
 	stroke: var(--shine);
 }
- .bulb__flash {
+.bulb__flash {
 	stroke: #f5e0a3;
 	display: none;
 }
- .bulb__bulb {
+.bulb__bulb {
 	stroke: var(--stroke);
 	fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
 }
- .bulb__cap {
+.bulb__cap {
 	fill: var(--cap);
 }
- .bulb__cap-shine {
+.bulb__cap-shine {
 	fill: var(--shine);
 }
- .bulb__cap-outline {
+.bulb__cap-outline {
 	stroke: var(--stroke);
-}
-
-/* About - JD Styles */
- .about-lightbulb {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: var(--bg);
-  padding-top: calc(var(--vw) * 13);
-}
-
- .about-lightbulb .max-1280 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 calc(var(--vw) * 5.5);
-}
-
-.about-lightbulb .header-wrap {
-  position: relative;
-  z-index: 1;
-}
-.about-lightbulb .header-wrap .section-heading {
-  color: var(--blackWhite);
-  margin-bottom: calc(var(--vw) * 3.8);
-}
-
-.about-lightbulb .header-wrap .pull-arrow-wrapper {
-  position: absolute;
-  top: calc(var(--vw) * -1);
-  width: calc(var(--vw) * 3);
-  right: calc(var(--vw) * -11);
-  left: auto;
-}
-.about-lightbulb .header-wrap .pull-arrow-wrapper p {
-  font-weight: 600;
-  font-size: calc(var(--vw) * 1.3);
-  margin: calc(var(--vw) * 0.7) calc(var(--vw) * 0) calc(var(--vw) * 0.4) calc(var(--vw) * 1.5);
-  transform: rotate(5deg);
-  color: var(--blackWhite);
-}
-.about-lightbulb .header-wrap .pull-arrow-wrapper .arrow {
-  position: absolute;
-  left: calc(var(--vw) * .7);
-  width: calc(var(--vw) * 2.3);
-}
-.about-lightbulb .header-wrap .pull-arrow-wrapper .arrow.day {
-  opacity: var(--dayOpacity);
-}
-.about-lightbulb .header-wrap .pull-arrow-wrapper .arrow.night {
-  opacity: var(--nightOpacity);
-}
-.about-lightbulb .about-cat-wrapper {
-  position: relative;
-  width: 100%;
-  height: calc(var(--vw) * 20);
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap {
-  width: calc(var(--vw) * 25);
-  padding: 0 calc(var(--vw) * 1.25);
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .svg-inline--fa {
-  height: calc(var(--vw) * 4.5);
-  margin-bottom: calc(var(--vw) * 2);
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper {
-  position: relative;
-  height: calc(var(--vw) * 4.5);
-  margin-bottom: calc(var(--vw) * 2);
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper img {
-  position: relative;
-  height: calc(var(--vw) * 7);
-  top: calc(var(--vw) * -1);
-  z-index: 1;
-}
-
-.about-lightbulb .about-cat-wrapper .skill-wrap .title {
-  font-weight: 600;
-  font-size: calc(var(--vw) * 1.4);
-  margin-bottom: calc(var(--vw) * .8);
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .subcopy {
-  font-weight: 100;
-  line-height: 1.5;
-  text-align: center;
-  font-size: calc(var(--vw) * 1.1);
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .subcopy a {
-  color: inherit;
-}
-.about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
-  margin-right: calc(var(--vw) * .2);
-  height: calc(var(--vw) * 1.5);
-}
-
-.about-lightbulb .about-cat-wrapper .about-day-wrapper,
-.about-lightbulb .about-cat-wrapper .about-night-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  transition: opacity .2s;
-}
-/* About Day - Start */
-.about-lightbulb .about-cat-wrapper .about-day-wrapper {
-  opacity: var(--dayOpacity);
-  
-}
-.about-lightbulb .about-cat-wrapper .about-night-wrapper p {
-  color: #404040;
-}
-  
-/* About Day - End */
-
-/* About Night - Start */
-.about-lightbulb .about-cat-wrapper .about-night-wrapper {
-  opacity: var(--nightOpacity);
-}
-.about-lightbulb .about-cat-wrapper .about-night-wrapper p,
-.about-lightbulb .about-cat-wrapper .about-night-wrapper path {
-  color: #ffffff;
-}
-
-.about-lightbulb .about-cat-wrapper .neon {
-  font-size:calc(var(--vw) * 3.1);
-  text-align: center;
-  color: var(--blueJD);
-  position: absolute;
-  text-align: center;
-  line-height: 1.1;
-  right: calc(var(--vw) * -1);
-  top: calc(var(--vw) * -11);
-  transform: rotate(5deg);
-  font-weight: 100;
-  letter-spacing: calc(var(--vw) * 0.1);
-  text-shadow: 1px 0px 4px var(--blueJD), 2px 0px 4px var(--blueJD), 3px 0px 4px var(--blueJD), 2px 0px 3px var(--blueJD), 2px 3px 15px var(--blueJD), 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px var(--blueJD),40px 0vw 200px var(--blueJD);
-}
-
-.about-lightbulb .about-cat-wrapper .flicker-slow{
-  animation: flicker 3s linear infinite;
-}
-
-.about-lightbulb .about-cat-wrapper .flicker-fast{
-  animation: flicker 1s linear infinite;
-}
-
-@keyframes flicker {
-	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: .99;
-	}
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-	}
-}
-
-
-/* About Night - End */
-
-@media only screen and (max-width:48em) {
-  .toggle-scene {
-    top: calc(var(--vw) * -3);
-    right: calc(var(--vw) * 9.5);
-    width: calc(var(--vw) * 17.5);
-  }
-  .about-lightbulb {
-    padding-bottom: calc(var(--vw) * 10);
-  }
-  .about-lightbulb .header-wrap {
-    padding-left: calc(var(--vw) * 1.5);
-  }
-  .about-lightbulb .header-wrap .section-heading {
-    text-align: left;
-    margin-bottom: calc(var(--vw) * 7.5);
-  }
-  .about-lightbulb .header-wrap .pull-arrow-wrapper {
-    top: calc(var(--vw) * 10);
-    right: calc(var(--vw) * -1);
-    width: auto;
-  }
-  .about-lightbulb .header-wrap .pull-arrow-wrapper p {
-    font-size: calc(var(--vw) * 4.1);
-  }
-  .about-lightbulb .header-wrap .pull-arrow-wrapper .arrow {
-    left: calc(var(--vw) * -2);
-    width: calc(var(--vw) * 7);
-  }
-
-  .about-lightbulb .about-cat-wrapper {
-    height: calc(var(--vw) * 100)
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap {
-    width: 50%;
-    padding: 0 calc(var(--vw) * 1.25);
-    margin-bottom: calc(var(--vw) * 8);
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap .svg-inline--fa,
-  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper {
-    height: calc(var(--vw) * 12.5);
-    margin-bottom: calc(var(--vw) * 2);
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper img {
-    height: calc(var(--vw) * 22);
-    top: calc(var(--vw) * -7.75);
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap .title {
-    text-align: center;
-    font-size: calc(var(--vw) * 4.5);
-    margin-bottom: calc(var(--vw) * 1.1);
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy {
-    font-size: calc(var(--vw) * 3.2);
-  }
-  .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
-    margin-right: calc(var(--vw) * 1);
-    margin-left: calc(var(--vw) * -1);
-    height: calc(var(--vw) * 5);
-  }
-  .about-lightbulb .about-cat-wrapper .about-day-wrapper,
-  .about-lightbulb .about-cat-wrapper .about-night-wrapper {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .about-lightbulb .about-cat-wrapper .neon {
-    right: auto;
-    left: calc(var(--vw) * 47);
-    transform: rotate(-5deg);
-    font-size: calc(var(--vw) * 4.75);
-    top: calc(var(--vw) * -17);
-  }
-
 }
