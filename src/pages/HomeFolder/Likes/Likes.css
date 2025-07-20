@@ -185,11 +185,7 @@
 /* About Night - End */
 
 @media only screen and (max-width:48em) {
-  .toggle-scene {
-    top: calc(var(--vw) * -3);
-    right: calc(var(--vw) * 9.5);
-    width: calc(var(--vw) * 17.5);
-  }
+
   .about-lightbulb {
     padding-bottom: calc(var(--vw) * 10);
   }

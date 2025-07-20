@@ -16,40 +16,62 @@
 }
 .brands-wrapper .brand-logos-wrapper .brand-wrap {
   width: 100%;
-  max-width: 93%;
+  max-width: 84%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .brands-wrapper .brand-logos-wrapper .brand-wrap .image-wrapper {
-  max-width: calc(var(--vw) * 10);
   height: calc(var(--vw) * 7.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 calc(var(--vw) * 2.2) calc(var(--vw) * .8) calc(var(--vw) * 2.2);
+  max-width: calc(var(--vw) * 14.25);
+  max-width: calc(var(--vw) * 14.25);
 }
 .brands-wrapper .brand-logos-wrapper .brand-wrap img {
   max-width: 100%;
   max-height: 100%;
 }
 
+.brands-wrapper .brand-logos-wrapper .brand-wrap .caboodles {
+  max-height: calc(var(--vw) * 6.25);
+}
 .brands-wrapper .brand-logos-wrapper .brand-wrap .disney {
-  max-height: calc(var(--vw) * 4);
+  margin-top: calc(var(--vw) * .2);
+  max-height: calc(var(--vw) * 4.4);
+}
+.brands-wrapper .brand-logos-wrapper .brand-wrap .hk {
+  margin-top: calc(var(--vw) * .75);
+  max-height: calc(var(--vw) * 3.4);
+}
+.brands-wrapper .brand-logos-wrapper .brand-wrap .lionsgate {
+  padding-top: calc(var(--vw) * 0);
+}
+.brands-wrapper .brand-logos-wrapper .brand-wrap .mgm {
+  margin-top: calc(var(--vw) * .9);
+  max-height: calc(var(--vw) * 4.2);
 }
 .brands-wrapper .brand-logos-wrapper .brand-wrap .paramount {
   max-height: calc(var(--vw) * 7);
 }
-.brands-wrapper .brand-logos-wrapper .brand-wrap .mgm {
-  padding-top: calc(var(--vw) * .3);
-  max-height: calc(var(--vw) * 3.8);
+.brands-wrapper .brand-logos-wrapper .brand-wrap .peanuts {
+  max-height: calc(var(--vw) * 4.2);
 }
-.brands-wrapper .brand-logos-wrapper .brand-wrap .hk {
-  padding-top: calc(var(--vw) * .3);
+.brands-wrapper .brand-logos-wrapper .brand-wrap .pusheen {
+  max-height: calc(var(--vw) * 2.9);
 }
-.brands-wrapper .brand-logos-wrapper .brand-wrap .lionsgate {
-  padding-top: calc(var(--vw) * .8);
+.brands-wrapper .brand-logos-wrapper .brand-wrap .squishmallows {
+  max-height: calc(var(--vw) * 6);
+}
+.brands-wrapper .brand-logos-wrapper .brand-wrap .universal {
+  padding-top: calc(var(--vw) * 0.7);
+}
+.brands-wrapper .brand-logos-wrapper .brand-wrap .zondervan {
+  padding-top: calc(var(--vw) * 0.7);
 }
 @media (max-width: 768px) {
   .brands-wrapper {
