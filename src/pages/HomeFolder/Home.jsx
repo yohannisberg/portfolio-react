@@ -14,7 +14,7 @@ export function Home() {
       <Hero />
       <Skills />
       <Likes />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Brands />
     </>
   );

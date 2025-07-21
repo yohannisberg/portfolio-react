@@ -47,9 +47,9 @@
 
 .about-lightbulb .header-wrap .pull-arrow-wrapper {
   position: absolute;
-  top: calc(var(--vw) * -1);
+  top: calc(var(--vw) * -1.25);
   width: calc(var(--vw) * 3);
-  right: calc(var(--vw) * -11);
+  right: calc(var(--vw) * -10.5);
   left: auto;
 }
 .about-lightbulb .header-wrap .pull-arrow-wrapper p {
@@ -108,7 +108,7 @@
   font-weight: 100;
   line-height: 1.5;
   text-align: center;
-  font-size: calc(var(--vw) * 1.1);
+  font-size: calc(var(--vw) * 1.2);
 }
 .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy a {
   color: inherit;

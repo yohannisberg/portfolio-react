@@ -7,7 +7,7 @@
   max-width: calc(var(--vw) * 65);
   margin: 0 auto calc(var(--vw) * 3.2) auto;
   line-height: 1.5;
-  font-size: calc(var(--vw) * 1.1);
+  font-size: calc(var(--vw) * 1.3);
 }
 .brands-wrapper .brand-logos-wrapper {
   display: flex;
@@ -71,46 +71,69 @@
   padding-top: calc(var(--vw) * 0.7);
 }
 .brands-wrapper .brand-logos-wrapper .brand-wrap .zondervan {
-  padding-top: calc(var(--vw) * 0.7);
+  padding-top: calc(var(--vw) * 0.2);
 }
 @media (max-width: 768px) {
   .brands-wrapper {
-    padding: calc(var(--vw) * 12) 0;
+    padding: calc(var(--vw) * 15) 0;
   }
   .brands-wrapper .subcopy {
-    font-size: calc(var(--vw) * 3.2);
+    font-size: calc(var(--vw) * 3.8);
     max-width: calc(var(--vw) * 84);
-    margin-bottom: calc(var(--vw) * 7);
+    margin-bottom: calc(var(--vw) * 10.5);
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap {
     flex-wrap: wrap;
+    max-width: 90%;
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .image-wrapper {
-    width: 50%;
+    width: 42%;
     max-width: none;
     height: auto;
     max-height: none;
     margin-bottom: calc(var(--vw) * 7.5);
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .disney img {
+    width: 85%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .universal img {
     width: 90%;
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .paramount img {
-    width: 54%;
-  }
-  .brands-wrapper .brand-logos-wrapper .brand-wrap .harper img {
-    width: 88%;
+    width: 69%;
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .mgm img {
-    width: 45%;
+    width: 80%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .lionsgate img {
+    width: 89%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .peanuts img {
+    width: 91%;
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .hk img {
-    width: 90%;
-  }
-  .brands-wrapper .brand-logos-wrapper .brand-wrap .pureflix img {
-    width: 65%;
+    width: 92%;
   }
   .brands-wrapper .brand-logos-wrapper .brand-wrap .pusheen img {
     width: 75%;
   }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .squishmallows img {
+    width: 89%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .caboodles img {
+    width: 68%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .harper img {
+    width: 90%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .pureflix img {
+    width: 66%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .zondervan img {
+    width: 91%;
+  }
+  .brands-wrapper .brand-logos-wrapper .brand-wrap .jg img {
+    width: 89%;
+  }
+
 }

@@ -186,7 +186,7 @@ const Likes = () => {
                 <FontAwesomeIcon icon={faFilm} />
 
                 <p className="title">Watching Movies</p>
-                <p className="subcopy">I have a soft spot for old&nbsp;noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
+                <p className="subcopy">I have a soft spot for old noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
             </div>
 
             <div className="skill-wrap">
