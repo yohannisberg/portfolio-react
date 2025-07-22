@@ -14,7 +14,7 @@ const Hero = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const [textY, setTextY] = useState(isMobile ? 450 : 280);
+  const [textY, setTextY] = useState(isMobile ? 520 : 280);
 
   const scrollDistRef = useRef(null);
   const layer1Ref = useRef(null);
@@ -186,18 +186,18 @@ const Hero = () => {
           transformOrigin: origin
         },
         {
-          y: 150,
+          y: 780,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
       .fromTo(layer2Ref.current,
         {
-          y: 1750,
+          y: 1850,
           scale: scaleDTMB,
           transformOrigin: origin
         },
         {
-          y: 1450,
+          y: 2050,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
@@ -208,7 +208,7 @@ const Hero = () => {
           transformOrigin: origin
         },
         {
-          y: 1050,
+          y: 1750,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
@@ -216,19 +216,12 @@ const Hero = () => {
         {
           y: -300,
           scale: scaleDTMB,
-          transformOrigin: origin
+          transformOrigin: origin,
         },
         {
-          y: -850,
+          y: -150,
           scale: scaleDTMB,
           transformOrigin: origin
-        }, 0)
-      .fromTo(heroWrapperRef.current,
-        {
-          marginBottom: 0,
-        },
-        {
-          marginBottom: -325,
         }, 0);
       return () => tl.kill();
     });
