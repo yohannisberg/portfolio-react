@@ -97,6 +97,8 @@ const Hero = () => {
 
   // GSAP ScrollTrigger animation setup that reacts to isMobile
   useEffect(() => {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
     const mm = gsap.matchMedia();
 
     const originX = 1200 / 2;
@@ -105,127 +107,132 @@ const Hero = () => {
 
     const scaleDTMB = isMobile ? 2.5 : 1.5;
 
-    mm.add("(min-width: 769px)", () => {
-      if (!layer1Ref.current) return;
+    if (isSafari) {
+      
+    }
+    else {
+      mm.add("(min-width: 769px)", () => {
+        if (!layer1Ref.current) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollDistRef.current,
-          start: 'top top',
-          end: '80% 50%',
-          scrub: 1,
-          // markers: true
-        }
-      })
-      .fromTo(layer3Ref.current,
-        {
-          y: -50,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: -75,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(layer2Ref.current,
-        {
-          y: 730,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: 660,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(layer1Ref.current,
-        {
-          y: 550,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: 460,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(cloud1Ref.current,
-        {
-          y: 290,
-          // scale: 1.2,
-          transformOrigin: origin,
-          rotation: -10
-        },
-        {
-          y: 20,
-          // scale: 1,
-          transformOrigin: origin,
-          rotation: 0,
-          force3D: true,
-        }, 0);
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollDistRef.current,
+            start: 'top top',
+            end: '80% 50%',
+            scrub: 1,
+            // markers: true
+          }
+        })
+        .fromTo(layer3Ref.current,
+          {
+            y: -50,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: -75,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(layer2Ref.current,
+          {
+            y: 730,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: 660,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(layer1Ref.current,
+          {
+            y: 550,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: 460,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(cloud1Ref.current,
+          {
+            y: 290,
+            scale: 1.2,
+            transformOrigin: origin,
+            rotation: -10
+          },
+          {
+            y: 20,
+            scale: 1,
+            transformOrigin: origin,
+            rotation: 0,
+            force3D: true,
+          }, 0);
 
-      return () => tl.kill();
-    });
+        return () => tl.kill();
+      });
 
-    mm.add("(max-width: 768px)", () => {
-      if (!layer1Ref.current) return;
+      mm.add("(max-width: 768px)", () => {
+        if (!layer1Ref.current) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollDistRef.current,
-          start: 'top top',
-          end: '80% 50%',
-          scrub: 1,
-          // markers: true
-        }
-      })
-      .fromTo(layer3Ref.current,
-        {
-          y: 500,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: 780,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(layer2Ref.current,
-        {
-          y: 1850,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: 2050,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(layer1Ref.current,
-        {
-          y: 1500,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        },
-        {
-          y: 1750,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0)
-      .fromTo(cloud1Ref.current,
-        {
-          y: -300,
-          scale: scaleDTMB,
-          transformOrigin: origin,
-        },
-        {
-          y: -150,
-          scale: scaleDTMB,
-          transformOrigin: origin
-        }, 0);
-      return () => tl.kill();
-    });
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollDistRef.current,
+            start: 'top top',
+            end: '80% 50%',
+            scrub: 1,
+            // markers: true
+          }
+        })
+        .fromTo(layer3Ref.current,
+          {
+            y: 500,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: 780,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(layer2Ref.current,
+          {
+            y: 1850,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: 2050,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(layer1Ref.current,
+          {
+            y: 1500,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          },
+          {
+            y: 1750,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0)
+        .fromTo(cloud1Ref.current,
+          {
+            y: -300,
+            scale: scaleDTMB,
+            transformOrigin: origin,
+          },
+          {
+            y: -150,
+            scale: scaleDTMB,
+            transformOrigin: origin
+          }, 0);
+        return () => tl.kill();
+      });
+    }
     return () => mm.revert();
   }, [isMobile]);
 
@@ -233,6 +240,7 @@ const Hero = () => {
     <div className="hero-wrapper" ref={heroWrapperRef}>
       <div className="scrollDist" ref={scrollDistRef}></div>
       <section className="hero-parallax">
+
         <svg
           ref={svgRef}
           viewBox={isMobile ? '0 0 1200 1800' : '0 0 1200 800'}
@@ -253,7 +261,7 @@ const Hero = () => {
           </g>
 
           <g ref={layer2Ref}>
-            <image className="layer_2" href="/layer_2_2.png" width="1200" />
+            <image className="layer_2" href="/layer_2_2.webp" width="1200" />
           </g>
 
           <text fill="#fff" x="50%" y={textY} textAnchor="middle" dominantBaseline="middle">
@@ -263,14 +271,14 @@ const Hero = () => {
           </text>
 
           <g ref={layer1Ref}>
-            <image className="layer_1" href="/layer_1_2.png" width="1200" />
+            <image className="layer_1" href="/layer_1_2.webp" width="1200" />
           </g>
 
           <g mask="url(#m)">
             <rect fill="#fff" width="100%" height="100%" />
-            {/* <text className="skills" x="50%" y="700" textAnchor="middle" dominantBaseline="middle" fill="#000000">SKILLS</text> */}
           </g>
         </svg>
+
       </section>
     </div>
   );
