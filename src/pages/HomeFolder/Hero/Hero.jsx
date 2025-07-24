@@ -153,15 +153,16 @@ const Hero = () => {
       .fromTo(cloud1Ref.current,
         {
           y: 290,
-          scale: 1.2,
+          // scale: 1.2,
           transformOrigin: origin,
           rotation: -10
         },
         {
           y: 20,
-          scale: 1,
+          // scale: 1,
           transformOrigin: origin,
-          rotation: 0
+          rotation: 0,
+          force3D: true,
         }, 0);
 
       return () => tl.kill();

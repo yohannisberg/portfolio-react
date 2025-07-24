@@ -44,6 +44,9 @@
   height: 100%;
    */
 }
+.hero-parallax g {
+  will-change: transform;
+}
 .hero-parallax .cloud1 image {
   backface-visibility: hidden;
 }
