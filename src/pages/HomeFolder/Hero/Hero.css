@@ -44,12 +44,14 @@
 .hero-parallax .cloud1 image {
   backface-visibility: hidden;
 }
-.hero-parallax text {
+.hero-parallax text,
+.hero-static-wrapper text {
   font-size: calc(var(--vwFW) * 4);
   margin-right: calc(var(--vwFW) * 1);
 }
 
-.hero-parallax text tspan {
+.hero-parallax text tspan,
+.hero-static-wrapper text tspan {
   font-weight: 700;
 }
 .hero-parallax .skills {
@@ -68,6 +70,22 @@
   transform: translate3d(0, 0, 0);
 }
 .layer_1 {
+  width: 100%;
+}
+
+/* Safari Styles */
+.hero-static-wrapper {
+  width: 100%;
+}
+.hero-static-wrapper text {
+  position: absolute;
+  top: calc(var(--vwFW) * 18.75);
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #ffffff;
+}
+.hero-static-wrapper .hero-img {
   width: 100%;
 }
 

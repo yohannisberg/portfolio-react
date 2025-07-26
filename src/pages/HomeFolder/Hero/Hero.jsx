@@ -23,6 +23,8 @@ const Hero = () => {
   const cloud1Ref = useRef(null);
   const svgRef = useRef(null);
   const heroWrapperRef = useRef(null);
+
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     
   // Scroll to top and fade in on mount
   useEffect(() => {
@@ -97,10 +99,7 @@ const Hero = () => {
 
   // GSAP ScrollTrigger animation setup that reacts to isMobile
   useEffect(() => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
     const mm = gsap.matchMedia();
-
     const originX = 1200 / 2;
     const originY = isMobile ? 1200 / 2 : 800 / 2;
     const origin = `${originX}px ${originY}px`;
@@ -116,7 +115,7 @@ const Hero = () => {
             trigger: scrollDistRef.current,
             start: 'top top',
             end: '80% 50%',
-            scrub: 1,
+            scrub: 0,
             // markers: true
           }
         })
@@ -359,47 +358,97 @@ const Hero = () => {
   return (
     <div className="hero-wrapper" ref={heroWrapperRef}>
       <div className="scrollDist" ref={scrollDistRef}></div>
-      <section className="hero-parallax">
 
-        <svg
-          ref={svgRef}
-          viewBox={isMobile ? '0 0 1200 1800' : '0 0 1200 800'}
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            <mask id="m">
-              <g className="cloud1" ref={cloud1Ref}>
-                <rect fill="#fff" width="100%" height="100%" y="1" />
-                <image href="/cloudMask.jpg" width="100%" height="100%" />
-              </g>
-            </mask>
-          </defs>
+      {!isSafari && (
+        
+        <section className="hero-parallax" >
 
-          <g ref={layer3Ref}>
-            <image className="layer_3" href="/layer_3.webp" width="1200" />
-          </g>
+          <svg
+            ref={svgRef}
+            viewBox={isMobile ? '0 0 1200 1800' : '0 0 1200 800'}
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <mask id="m">
+                <g className="cloud1" ref={cloud1Ref}>
+                  <rect fill="#fff" width="100%" height="100%" y="1" />
+                  <image href="/cloudMask.jpg" width="100%" height="100%" />
+                </g>
+              </mask>
+            </defs>
 
-          <g ref={layer2Ref}>
-            <image className="layer_2" href="/layer_2_2.webp" width="1200" />
-          </g>
+            <g ref={layer3Ref}>
+              <image className="layer_3" href="/layer_3.webp" width="1200" />
+            </g>
 
+            <g ref={layer2Ref}>
+              <image className="layer_2" href="/layer_2_2.webp" width="1200" />
+            </g>
+
+            <text fill="#fff" x="50%" y={textY} textAnchor="middle" dominantBaseline="center">
+              I LOVE&nbsp;
+              <tspan fill="#fff">{text}</tspan>
+              {showCursor && <tspan fill="#808080">|</tspan>}
+            </text>
+
+            <g ref={layer1Ref}>
+              <image className="layer_1" href="/layer_1_2.webp" width="1200" />
+            </g>
+
+            <g mask="url(#m)">
+              <rect fill="#fff" width="100%" height="100%" />
+            </g>
+          </svg>
+
+        </section>
+      )}
+      {isSafari && (
+        <div className="hero-static-wrapper">
           <text fill="#fff" x="50%" y={textY} textAnchor="middle" dominantBaseline="center">
             I LOVE&nbsp;
             <tspan fill="#fff">{text}</tspan>
             {showCursor && <tspan fill="#808080">|</tspan>}
           </text>
 
-          <g ref={layer1Ref}>
-            <image className="layer_1" href="/layer_1_2.webp" width="1200" />
-          </g>
+          <picture> 
+            <source media="(min-width:768px)" srcset="/hero-dt-safari.webp" /> 
+            <img class="hero-img" alt="Mountain and landscape" src="/hero-mb-safari.webp" /> 
+          </picture>
 
-          <g mask="url(#m)">
-            <rect fill="#fff" width="100%" height="100%" />
-          </g>
-        </svg>
 
-      </section>
+          <svg
+            ref={svgRef}
+            viewBox={isMobile ? '0 0 1200 800' : '0 0 1200 800'}
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+            width= {isMobile ? '150%' : '110%'}
+            style={{
+              position: 'absolute',
+              top: 195,
+              left: 0,
+              height: '100%',
+              transform: 'rotate(3deg)',
+              pointerEvents: 'none',
+            }}
+          >
+            <defs>
+              <mask id="m">
+                <g className="cloud1" ref={cloud1Ref}>
+                  <rect fill="#fff" width="100%" height="100%" y="1" />
+                  <image href="/cloudMask.jpg" width="100%" height="100%" />
+                </g>
+              </mask>
+            </defs>
+
+            <g mask="url(#m)">
+              <rect fill="#fff" width="100%" height="100%" />
+            </g>
+          </svg>
+
+        </div>
+      )}
+
     </div>
   );
 };
