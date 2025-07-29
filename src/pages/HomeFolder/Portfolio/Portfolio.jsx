@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Portfolio = () => {
   return (
     <section id="portfolio" className="bg-light-gray">  
@@ -6,6 +8,8 @@ const Portfolio = () => {
           <h2 className="section-heading">Portfolio</h2>
         </div>
       </div>
+
+       <Link to="/cclub">Go to Cclub</Link>
 
       <div className="port-flex-wrapper portfolio-container">
         <div className="flex-wrap1">
