@@ -6,22 +6,22 @@
 
 @font-face {
   font-family: plaax;
-  src: url(./fonts/PlaaxLight.ttf);
+  src: url(/PlaaxLight.ttf);
   font-weight: 300;
 }
 @font-face {
   font-family: plaax;
-  src: url(./fonts/PlaaxRegular.ttf);
+  src: url(/PlaaxRegular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: plaax;
-  src: url(./fonts/PlaaxBold.ttf);
+  src: url(/PlaaxBold.ttf);
   font-weight: 700;
 }
 @font-face {
   font-family: plaax;
-  src: url(./fonts/PlaaxHeavy.ttf);
+  src: url(/PlaaxHeavy.ttf);
   font-weight: 900;
 }
 
@@ -196,6 +196,7 @@
 	font-size: calc(var(--vw) * 1.8);
 	margin-bottom: calc(var(--vw) * 2);
 	margin-top: calc(var(--vw) * 1);
+  text-transform: none;
 }
 
 .cclub-component .button-popup button {
@@ -428,6 +429,7 @@
 	display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  z-index:1;
 }
 .cclub-component .cta-wrapper .cta {
 	margin-left: calc(var(--vw)*.75);

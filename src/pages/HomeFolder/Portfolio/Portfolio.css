@@ -1,0 +1,7 @@
+.portfolio-wrapper {
+  padding-top: calc(var(--vw) * 4);
+}
+.portfolio-wrapper .all-projects-wrapper {
+  display: flex;
+  flex-direction: row;
+}

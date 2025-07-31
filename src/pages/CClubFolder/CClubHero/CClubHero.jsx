@@ -2,7 +2,7 @@ import './CClubHero.css';
 import { Button } from '../Button';
 
 
-const CClubHero = () => {
+export const CClubHero = () => {
   return (
     <section className="cclub-component hero-component dark-blue-background">
       <div className="max-1300">
@@ -13,8 +13,8 @@ const CClubHero = () => {
           <h2 className="white">Welcome to <img src="/CCLUBlogo.png" alt="C.Club"/></h2>
           <p className="white">C•CLUB is where you get <br className="mobile-only"/>rewarded just <br className="desktop-only"/>for being you. <br className="mobile-only"/>It’s true! Sign up for FREE <br className="mobile-only"/>to unlock <br className="desktop-only"/>exclusive Rewards <br className="mobile-only"/>and endless perks.</p>
 
-          <Button class="trackCTA cta" dataCtainfo="HP CLUXE CTA" name="Join Now" />
-          <Button class="trackCTA cta-no-button" dataCtainfo="HP CLUXE CTA" name="SIGN IN" />
+          <Button className="trackCTA cta" dataCtainfo="HP CLUXE CTA" name="Join Now" />
+          <Button className="trackCTA cta-no-button" dataCtainfo="HP CLUXE CTA" name="SIGN IN" />
         </div>
         
         <picture>
@@ -25,5 +25,3 @@ const CClubHero = () => {
     </section>
   )
 };
-
-export default CClubHero;

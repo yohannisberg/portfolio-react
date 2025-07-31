@@ -1,15 +1,38 @@
 import { Link } from 'react-router-dom';
+import './Portfolio.css'
+
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="bg-light-gray">  
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <h2 className="section-heading">Portfolio</h2>
-        </div>
+    <section className="portfolio-comp portfolio-wrapper">
+
+      <div className="max-1280">
+        <div className="header-wrap text-center">
+    			<h2 className="section-heading">Portfolio</h2>
+		    </div>
       </div>
 
-       <Link to="/cclub">Go to Cclub</Link>
+			<div className="all-projects-wrapper">
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <Link to="/cclub" target="_blank">Go to Cclub</Link>
 
       <div className="port-flex-wrapper portfolio-container">
         <div className="flex-wrap1">
