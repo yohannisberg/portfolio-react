@@ -1,0 +1,43 @@
+.flip3d-button {
+  width: 160px;
+  height: 50px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip3d-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform .65s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip3d-inner.flipped {
+  transform: rotateX(180deg);
+}
+
+.flip3d-front,
+.flip3d-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1e88e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.flip3d-front {
+  background-color: #1e88e5;
+}
+
+.flip3d-back {
+  background-color: #43a047;
+  transform: rotateX(180deg);
+}

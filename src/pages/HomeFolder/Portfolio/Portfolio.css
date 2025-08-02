@@ -4,4 +4,31 @@
 .portfolio-wrapper .all-projects-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio-wrapper .all-projects-wrapper .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .img {
+  max-width: 100%;
+}
+
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel.hide {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel.show {
+  max-height: 1000px;
+  opacity: 1;
+  pointer-events: all;
 }

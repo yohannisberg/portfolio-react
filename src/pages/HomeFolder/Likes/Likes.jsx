@@ -147,27 +147,27 @@ const Likes = () => {
         <div className="about-cat-wrapper">
           <div className="about-day-wrapper">
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faCode} />
-                <p className="title">Coding</p>
-                <p className="subcopy">Lets me turn ideas into experiences— creative problem-solving is deeply&nbsp;rewarding.</p>
+              <FontAwesomeIcon icon={faCode} />
+              <p className="title">Coding</p>
+              <p className="subcopy">Lets me turn ideas into experiences— creative problem-solving is deeply&nbsp;rewarding.</p>
             </div>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faUtensils} />
-                <p className="title">Cooking</p>
-                <p className="subcopy">Experimenting with flavors feels a&nbsp;lot like debugging, just&nbsp;tastier.</p>
+              <FontAwesomeIcon icon={faUtensils} />
+              <p className="title">Cooking</p>
+              <p className="subcopy">Experimenting with flavors feels a&nbsp;lot like debugging, just&nbsp;tastier.</p>
             </div>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faHiking} />
-                <p className="title">Hiking</p>
-                <p className="subcopy">There’s nothing like fresh&nbsp;air and a good trail to reset and&nbsp;recharge.</p>
+              <FontAwesomeIcon icon={faHiking} />
+              <p className="title">Hiking</p>
+              <p className="subcopy">There’s nothing like fresh&nbsp;air and a good trail to reset and&nbsp;recharge.</p>
             </div>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faMusic} />
-                <p className="title">Music</p>
-                <p className="subcopy">I'm a singer/songwriter, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
+              <FontAwesomeIcon icon={faMusic} />
+              <p className="title">Music</p>
+              <p className="subcopy">I'm a singer/songwriter, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
             </div>
 
           </div>
@@ -177,30 +177,30 @@ const Likes = () => {
             <p className="neon" data-text="U">AF<span className="flicker-slow">T</span>ER <br />DA<span className="flicker-fast">R</span>K</p>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faBook} />
-                <p className="title">Reading</p>
-                <p className="subcopy">I usually enjoy autobiographies, but lately I’ve been journeying through Middle&nbsp;Earth.</p>
+              <FontAwesomeIcon icon={faBook} />
+              <p className="title">Reading</p>
+              <p className="subcopy">I usually enjoy autobiographies, but lately I’ve been journeying through Middle&nbsp;Earth.</p>
             </div>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faFilm} />
+              <FontAwesomeIcon icon={faFilm} />
 
-                <p className="title">Watching Movies</p>
-                <p className="subcopy">I have a soft spot for old noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
+              <p className="title">Watching Movies</p>
+              <p className="subcopy">I have a soft spot for old noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
             </div>
 
             <div className="skill-wrap">
-                <FontAwesomeIcon icon={faBed} />
-                <p className="title">Sleeping</p>
-                <p className="subcopy">A full night's sleep keeps&nbsp;me at my&nbsp;best.</p>
+              <FontAwesomeIcon icon={faBed} />
+              <p className="title">Sleeping</p>
+              <p className="subcopy">A full night's sleep keeps&nbsp;me at my&nbsp;best.</p>
             </div>
 
             <div className="skill-wrap">
-                <div className="mTWrapper">
-                  <img src="/mooseTracks.png" />
-                </div>
-                <p className="title">Moose Tracks</p>
-                <p className="subcopy">There's nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
+              <div className="mTWrapper">
+                <img src="/mooseTracks.png" />
+              </div>
+              <p className="title">Moose Tracks</p>
+              <p className="subcopy">There's nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
             </div>
 
           </div>
