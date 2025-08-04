@@ -1,66 +1,20 @@
-import { Link } from 'react-router-dom';
-import './Portfolio.css'
-import { PortfolioData } from './PortfolioData.js';
-
-import React, { useState } from 'react';
-import './FlipButton.css';
+import './Portfolio.css';
+import ProjectCard from './ProjectCard';
 
 
 const Portfolio = () => {
-  const [flipped, setFlipped] = useState(false);
-
-  const portfolioData = [
-    { siteImg:"/sandovalNew500.jpg", siteImgAlt:"Sandoval Website",  title: 'Sandoval Design & Marketing', subTitle: 'Official website for agency',  },
-  ];
 
   return (
     <section className="portfolio-comp portfolio-wrapper">
 
       <div className="max-1280">
         <div className="header-wrap text-center">
-    	    <h2 className="section-heading">Portfolio</h2>
-		    </div>
-      </div>
-
-      <div className="all-projects-wrapper">
-
-        {PortfolioData.map((data, index) => (
-        <div key={index} className="portfolio-item">
-          <img src={data.image} className="img" alt={data.imageAlt} />
-          <p class="title">{data.title}</p>
-          <p class="sub-title">{data.subtitle}</p>
-
-          <div className="flip3d-button" onClick={() => setFlipped(!flipped)}>
-            <div className={`flip3d-inner ${flipped ? 'flipped' : ''}`}>
-              <div className="flip3d-front">Info</div>
-              <div className="flip3d-back">Close</div>
-            </div>
-          </div>
-
-          <div className={`panel ${flipped ? 'show' : 'hide'}`}>
-            <div className='linksWrapper'>
-              <Link to={data.link} target="_blank">Live Site</Link>
-              <p className='link red'>Still in the works</p>
-            </div>
-
-            <div className='description'>
-              <p className="muted">{data.blurb1}</p>
-              <a href={data.companyLink} target="_blank">
-                <img src={data.companyImage} alt={data.companyAlt} />
-              </a>
-              <p className="muted">{data.blurb2}</p>
-              <p className="muted"><b>Technologies:</b> {data.tech}</p>
-              <p className="muted"><b>Functionality: </b>{data.funct}</p>
-            </div>
-          </div>
+          <h2 className="section-heading">Portfolio</h2>
         </div>
-        ))}
-
       </div>
 
-
-       <Link to="/cclub" target="_blank">Go to Cclub</Link>
-
+      <ProjectCard />
+      
       <div className="port-flex-wrapper portfolio-container">
         <div className="flex-wrap1">
 

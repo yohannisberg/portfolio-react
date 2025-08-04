@@ -17,19 +17,20 @@ export const PortfolioData = [
     bonusCaption: "*I'm also an extra in this movie and can be seen in the home page's video <i className='em em-sunglasses'></i>"
   },
   {
-    image: '/sandovalNew500.jpg',
-    title: 'Sandoval Design & Marketing',
-    subtitle: 'Official website for agency',
+    image: '/wesco500two.jpg',
+    imageAlt: 'WEScompany Website',
+    title: 'WEScompany',
+    subtitle: 'Official website for electrical company',
     blurb1: 'Created while at Sandoval Design & Marketing',
+    link: 'http://wescompany.com/',
     companyImage: '/sandovalLogo.png',
     companyAlt: 'Sandoval Design & Marketing',
     companyLink: 'https://sandovaldesign.com',
     blurb2:'I developed the entire fully responsive website',
-    tech: 'PHP, Wordpress, Gravity Forms, Git, Gulp, SASS & HTML',
-    funct: 'User can find information regarding the agency and contact the team',
+    tech: 'PHP, Wordpress, Gravity Forms, Gulp, SASS & HTML',
+    funct: 'User can find information regarding WEScompany and contact their team',
     videoTour:'',
-    bonusImg:'/fhlExtra300.jpg',
-    bonusCaption: "*I'm also an extra in this movie and can be seen in the home page's video <i className='em em-sunglasses'></i>"
+    bonusImg:'',
+    bonusCaption: ""
   },
-  // Add more...
 ];
