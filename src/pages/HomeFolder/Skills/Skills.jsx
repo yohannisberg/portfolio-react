@@ -21,19 +21,19 @@ const Skills = () => {
     { class:"html", image: '/html5-color.svg', alt: 'HTML5 Logo', name: 'HTML5' },
     { class:"css", image: '/css3-color.svg', alt: 'CSS3 Logo', name: 'CSS3' },
     { class:"js", image: '/javascript.svg', alt: 'JavaScript Logo', name: 'JavaScript' },
-    { class:"figma", image: '/Figma-logo.svg', alt: 'Figma Logo', name: 'Figma'},
+    { class:"wp", image: '/wordpress.svg', alt: 'Wordpress Logo', name: 'Wordpress' },
+    { class:"php", image: '/PHP-logo.svg', alt: 'PHP Logo', name: 'PHP' },
+    { class:"greensock", image: '/greensock.png', alt: 'Greensock Logo', name: 'GSAP' },
+    { class:"jquery", image: '/jquery-icon.png', alt: 'jQuery Logo', name: 'jQuery' },
     { class:"ajs", image: '/angular-color.svg', alt: 'AngularJS Logo', name: 'AngularJS' },
+    { class:"sass", image: '/sass2.png', alt: 'Sass Logo', name: 'Sass' },
+    { class:"figma", image: '/Figma-logo.svg', alt: 'Figma Logo', name: 'Figma'},
+    { class:"git", image: '/git.svg', alt: 'Git Logo', name: 'Git' },
     { class:"npm", image: '/Npm-logo.svg', alt: 'NPM Logo', name: 'NPM' },
     { class:"node", image: '/nodejs.svg', alt: 'Node.JS Logo', name: 'Node.JS' },
-    { class:"greensock", image: '/greensock.png', alt: 'Greensock Logo', name: 'GSAP' },
-    { class:"git", image: '/git.svg', alt: 'Git Logo', name: 'Git' },
     { class:"sql", image: '/Postgres.svg', alt: 'SQL Logo', name: 'SQL' },
     { class:"express", image: '/express.png', alt: 'Express.JS Logo', name: 'Express.JS' },
     { class:"gulp", image: '/gulp.svg', alt: 'Gulp Logo', name: 'Gulp' },
-    { class:"wp", image: '/wordpress.svg', alt: 'Wordpress Logo', name: 'Wordpress' },
-    { class:"php", image: '/PHP-logo.svg', alt: 'PHP Logo', name: 'PHP' },
-    { class:"jquery", image: '/jquery-icon.png', alt: 'jQuery Logo', name: 'jQuery' },
-    { class:"sass", image: '/sass2.png', alt: 'Sass Logo', name: 'Sass' },
     { class:"bootstrap", image: '/Boostrap_logo.svg', alt: 'Bootstrap Logo', name: 'Bootstrap' },
     // { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
     { class:"photoshop", image: '/pscs6.png', alt: 'Adobe Photoshop Logo', name: 'Photoshop' },
@@ -48,10 +48,9 @@ const Skills = () => {
           <img className="cloudBorderTop" src="/cloud-border.png" alt="Cloud" />
         </div>
 
-
-        <div className="cloudBorderWrap bottom">
+        {/* <div className="cloudBorderWrap bottom">
           <img className="cloudBorderBottom" src="/cloud-border-bottom-2.png" alt="Cloud" />
-        </div>
+        </div> */}
 
         <div className="max-1280">
 
@@ -69,6 +68,8 @@ const Skills = () => {
               </div>
             ))}
           </Slider>
+
+          {/* <IconPhysics /> */}
 
           <div className="skills-icons-wrapper desktop-only-jd">
             {skillsData.map((data, index) => (

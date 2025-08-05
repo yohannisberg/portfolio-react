@@ -123,14 +123,23 @@ const Hero = () => {
           // markers: true
         }
       })
+      .fromTo(textRef.current,
+        {
+          y: 270,
+          scale: 1,
+        },
+        {
+          y: 290,
+          scale: 1.1,
+        }, 0)
       .fromTo(layer3Ref.current,
         {
-          y: -50,
+          y: 190,
           scale: scaleDTMB,
           transformOrigin: origin
         },
         {
-          y: -75,
+          y: 150,
           scale: scaleDTMB,
           transformOrigin: origin
         }, 0)
@@ -158,16 +167,23 @@ const Hero = () => {
         }, 0)
       .fromTo(cloud1Ref.current,
         {
-          y: 290,
+          y: 220,
           scale: 1.2,
           transformOrigin: origin,
           rotation: -10
         },
         {
-          y: 20,
+          y: 30,
           scale: 1,
           transformOrigin: origin,
           rotation: 0
+        }, 0)
+      .fromTo(heroWrapperRef.current,
+        {
+          marginBottom: 0,
+        },
+        {
+          marginBottom: -65,
         }, 0);
 
       return () => tl.kill();
@@ -185,6 +201,15 @@ const Hero = () => {
             // markers: true
           }
         })
+        .fromTo(textRef.current,
+          {
+            y: 430,
+            scale: 1,
+          },
+          {
+            y: 825,
+            scale: 1.05,
+          }, 0)
         .fromTo(layer3Ref.current,
           {
             y: 890,
@@ -199,35 +224,44 @@ const Hero = () => {
         .fromTo(layer2Ref.current,
           {
             y: 1850,
-            scale: scaleDTMB,
+            scale: 2.5,
             transformOrigin: origin
           },
           {
             y: 2050,
-            scale: scaleDTMB,
+            scale: 2.6,
             transformOrigin: origin
           }, 0)
         .fromTo(layer1Ref.current,
           {
             y: 1500,
-            scale: scaleDTMB,
+            scale: 2.5,
             transformOrigin: origin
           },
           {
             y: 1750,
-            scale: scaleDTMB,
+            scale: 2.65,
             transformOrigin: origin
           }, 0)
         .fromTo(cloud1Ref.current,
           {
             y: -300,
-            scale: scaleDTMB,
+            x: 60,
+            scale: 2.5,
             transformOrigin: origin,
           },
           {
-            y: -150,
-            scale: scaleDTMB,
+            y: -290,
+            scale: 2.7,
+            x: 85,
             transformOrigin: origin
+          }, 0)
+        .fromTo(heroWrapperRef.current,
+          {
+            marginBottom: 0,
+          },
+          {
+            marginBottom: -10,
           }, 0);
         return () => tl.kill();
       });
@@ -296,21 +330,13 @@ const Hero = () => {
             <img class="hero-img" alt="Mountain and landscape" src="/hero-mb-safari.webp" /> 
           </picture>
 
-
           <svg
             ref={svgRef}
+            className='cloudSafari'
             viewBox="0 0 1200 800"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice"
             width= {isMobile ? '150%' : '110%'}
-            style={{
-              position: 'absolute',
-              top: 200,
-              left: -50,
-              height: '100%',
-              transform: 'rotate(-5deg)',
-              pointerEvents: 'none',
-            }}
           >
             <defs>
               <mask id="m">

@@ -26,8 +26,8 @@ const ProjectCard = () => {
                 flippedIndex === index ? 'flipped' : ''
               }`}
             >
-              <div className="flip3d-front">Info</div>
-              <div className="flip3d-back">Close</div>
+              <p className="flip3d-front">Info</p>
+              <p className="flip3d-back">Close</p>
             </div>
           </div>
 
@@ -37,10 +37,10 @@ const ProjectCard = () => {
             <div className="linksWrapper">
               {data.link && (
                 <Link to={data.link} target="_blank" rel="noopener noreferrer">
-                  Live Site
+                  <p>Live Site <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p> 
                 </Link>
               )}
-              <p className="link red">Still in the works</p>
+              {data.videoTour && <a href={data.videoLink} target="_blank"><p>Video Tour <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p></a>}
             </div>
 
             <div className="description">
@@ -51,7 +51,7 @@ const ProjectCard = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={data.companyImage} alt={data.companyAlt} />
+                  <img class={data.companyClass} src={data.companyImage} alt={data.companyAlt} />
                 </a>
               )}
               <p className="muted">{data.blurb2}</p>

@@ -149,13 +149,13 @@ const Likes = () => {
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faCode} />
               <p className="title">Coding</p>
-              <p className="subcopy">Lets me turn ideas into experiences— creative problem-solving is deeply&nbsp;rewarding.</p>
+              <p className="subcopy">It's deeply rewarding to creatively solve problems and turn ideas into&nbsp;experiences.</p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faUtensils} />
               <p className="title">Cooking</p>
-              <p className="subcopy">Experimenting with flavors feels a&nbsp;lot like debugging, just&nbsp;tastier.</p>
+              <p className="subcopy">Experimenting with flavors is a&nbsp;little like debugging, just&nbsp;tastier.</p>
             </div>
 
             <div className="skill-wrap">
@@ -167,7 +167,7 @@ const Likes = () => {
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faMusic} />
               <p className="title">Music</p>
-              <p className="subcopy">I'm a singer/songwriter, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
+              <p className="subcopy">I enjoy making music, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
             </div>
 
           </div>
@@ -179,20 +179,20 @@ const Likes = () => {
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faBook} />
               <p className="title">Reading</p>
-              <p className="subcopy">I usually enjoy autobiographies, but lately I’ve been journeying through Middle&nbsp;Earth.</p>
+              <p className="subcopy">Lately before bed, I've been journeying through Middle&nbsp;Earth.</p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faFilm} />
 
               <p className="title">Watching Movies</p>
-              <p className="subcopy">I have a soft spot for old noir&nbsp;films. <br /> <a href="https://letterboxd.com/WastingMoney1/" target="_blank"><img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" />Letterboxd</a></p>
+              <p className="subcopy">Love a good movie after work. I&nbsp;have a soft spot for old noir&nbsp;films.</p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faBed} />
               <p className="title">Sleeping</p>
-              <p className="subcopy">A full night's sleep keeps&nbsp;me at my&nbsp;best.</p>
+              <p className="subcopy">"(A) man needs his seven hours, keeps your mind sharp." - Paulie&nbsp;Walnuts</p>
             </div>
 
             <div className="skill-wrap">

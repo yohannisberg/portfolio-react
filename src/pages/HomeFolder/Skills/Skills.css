@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   padding-top: 0;
-  padding-bottom: calc(var(--vw) * 4);
+  padding-bottom: calc(var(--vw) * 5.5);
 }
 
 /* Cloud Wrap - Global */
@@ -75,7 +75,7 @@
     padding: 0;
   }
   .skills-wrapper .skills-icons-wrapper .slick-slide {
-    width: calc(var(--vw) * 26);
+    width: calc(var(--vw) * 24);
     margin-left: calc(var(--vw) * 3);
     margin-right: calc(var(--vw) * 0);
     padding: 0 calc(var(--vw) * 3);
@@ -126,5 +126,8 @@
     width: calc(var(--vw) * 3.8);
     height: calc(var(--vw) * 3.8);
     color: #000000;
+  }
+  .skills-wrapper .skills-icons-wrapper .slick-list .slick-track {
+    left: calc(var(--vw) * 5);
   }
 }
