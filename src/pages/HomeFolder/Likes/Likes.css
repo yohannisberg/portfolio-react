@@ -26,8 +26,8 @@
   flex-direction: column;
   align-items: center;
   background: var(--bg);
-  padding-top: calc(var(--vw) * 6.5);
-  padding-bottom: calc(var(--vw) * 4);
+  padding-top: calc(var(--vw) * 5.5);
+  padding-bottom: calc(var(--vw) * 2);
 }
 
  .about-lightbulb .max-1280 {

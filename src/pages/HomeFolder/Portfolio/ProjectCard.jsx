@@ -37,13 +37,17 @@ const ProjectCard = () => {
             <div className="linksWrapper">
               {data.link && (
                 <Link to={data.link} target="_blank" rel="noopener noreferrer">
-                  <p>Live Site <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p> 
+                  <p>Live <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p> 
                 </Link>
               )}
               {data.videoTour && <a href={data.videoLink} target="_blank"><p>Video Tour <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p></a>}
             </div>
 
             <div className="description">
+              {data.archived && (
+                <p className="archived"><b>Archived project </b> <br />live link no longer available 😭 </p>
+              )}
+
               <p className="muted">{data.blurb1}</p>
               {data.companyLink && (
                 <a
@@ -51,7 +55,7 @@ const ProjectCard = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img class={data.companyClass} src={data.companyImage} alt={data.companyAlt} />
+                  <img className={data.companyClass} src={data.companyImage} alt={data.companyAlt} />
                 </a>
               )}
               <p className="muted">{data.blurb2}</p>

@@ -46,3 +46,14 @@
   font-weight: 600;
 
 }
+
+@media (max-width: 768px) {
+  .flip3d-inner {
+    width: calc(var(--vw) * 34.5);
+    height: calc(var(--vw) * 9.5);
+  }
+  .flip3d-front, .flip3d-back {
+    font-size: calc(var(--vw) * 3.2);
+    border: var(--blueJD) solid calc(var(--vw) * .36);
+  }
+}

@@ -1,6 +1,7 @@
 .portfolio-wrapper {
-  background: #eeeeee;
-  padding-top: calc(var(--vw) * 6);
+  background: var(--grayJD);
+  padding-top: calc(var(--vw) * 5.5);
+  padding-bottom: calc(var(--vw) * 3);
 }
 .portfolio-wrapper h2.section-heading {
   margin-bottom: calc(var(--vw) * 0.4);
@@ -32,7 +33,7 @@
 
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .sub-title {
   font-weight: 400;
-  font-size: calc(var(--vw) * 1.2);
+  font-size: calc(var(--vw) * 1.1);
   font-style: italic;
   margin-bottom: calc(var(--vw) * 1.15);
 }
@@ -75,6 +76,10 @@
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p {
   margin-bottom:  calc(var(--vw) * 1.5);
+  transition: all .25s;
+}
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p:hover {
+  transform: scale(1.08);
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a .openLink {
   width: calc(var(--vw) * 1.4);
@@ -85,16 +90,92 @@
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description p {
   font-size: calc(var(--vw) * 1.05);
 }
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .archived {
+  text-transform: uppercase;
+  font-size: calc(var(--vw) * .85);
+}
 
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .bigfish {
+  width: calc(var(--vw) * 7);
+  margin-top: calc(var(--vw) * -.19);
+  margin-bottom: calc(var(--vw) * 1.2);
+}
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .claires {
   width: calc(var(--vw) * 13.5);
   margin-top: calc(var(--vw) * -.19);
-  margin-bottom: calc(var(--vw) * 1.8);
+  margin-bottom: calc(var(--vw) * 1.5);
 }
-
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .sandoval {
   width: calc(var(--vw) * 20);
   margin-right: calc(var(--vw) * -3.2);
   margin-top: calc(var(--vw) * -.19);
   margin-bottom: calc(var(--vw) * 1.8);
+}
+
+@media (max-width: 768px) {
+  .portfolio-wrapper {
+    padding-top: calc(var(--vw) * 11.5);
+  }
+  .portfolio-wrapper h2.section-heading {
+    margin-bottom: calc(var(--vw) * 1);
+  }
+  .portfolio-wrapper .all-projects-wrapper {
+    margin-top: calc(var(--vw) * 9);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item {
+    width: 87%;
+    padding-bottom: calc(var(--vw) * 3);
+    margin-bottom: calc(var(--vw) * 9.75);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .img {
+    margin-bottom: calc(var(--vw) * 4.75);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .title {
+    font-size: calc(var(--vw) * 4.4);
+    margin-bottom: calc(var(--vw) * 0.8);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .sub-title {
+    font-size: calc(var(--vw) * 3.4);
+    margin-bottom: calc(var(--vw) * 3.9);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel {
+    margin-top: calc(var(--vw) * 2.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper {
+    margin-bottom: calc(var(--vw) * 3.2);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p {
+    font-size: calc(var(--vw) * 3.75);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a .openLink {
+    width: calc(var(--vw) * 4.6);
+    padding-bottom: calc(var(--vw) * 1.3);
+    margin-left: calc(var(--vw) * 0.7);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description {
+    padding: 0 calc(var(--vw) * 1.25);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description p {
+    font-size: calc(var(--vw) * 3.2);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .archived {
+    font-size: calc(var(--vw) * 3);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .bigfish {
+    width: calc(var(--vw) * 21);
+    margin-top: calc(var(--vw) * 0);
+    margin-bottom: calc(var(--vw) * 4.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .claires {
+    width: calc(var(--vw) * 37);
+    margin-top: calc(var(--vw) * -1);
+    margin-bottom: calc(var(--vw) * 5.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .sandoval {
+    width: calc(var(--vw) * 53);
+    margin-right: calc(var(--vw) * -8);
+    margin-top: calc(var(--vw) * -0.2);
+    margin-bottom: calc(var(--vw) * 5.75);
+    }
+  }
 }

@@ -15,6 +15,7 @@
   --vwFW: 1vw;
 
   --blueJD: #65afff;
+  --grayJD: #eeeeee;
 }
 /* 1280px = 80em */
 /* 1200px = 75em */
@@ -68,5 +69,13 @@ section p.section-subcopy {
   section h2.section-heading {
     font-size: calc(var(--vw) * 14);
     margin-bottom: calc(var(--vw) * 5);
+  }
+
+  section p.section-subcopy {
+    font-size: calc(var(--vw) * 3.9);
+    font-weight: 400;
+    margin-top: calc(var(--vw) * 0);
+    margin-bottom: calc(var(--vw) * 3.4);
+    font-style: italic;
   }
 }
