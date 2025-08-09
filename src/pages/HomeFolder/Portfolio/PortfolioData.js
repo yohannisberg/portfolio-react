@@ -3,7 +3,7 @@ export const PortfolioData = [
     image: '/anova.jpg',
     imageAlt: 'Anova Website',
     title: 'Anova',
-    subtitle: 'Official website for an industrial assets company',
+    subtitle: 'Official website for industrial assets company',
     blurb1: 'Created while at Bigfish Creative Group',
     link: 'https://www.anova.com/',
     companyClass: "bigfish",

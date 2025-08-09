@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const Portfolio = () => {
 
   return (
-    <section className="portfolio-comp portfolio-wrapper">
+    <section id="portfolio" className="portfolio-comp portfolio-wrapper">
 
       <div className="max-1280">
         <div className="header-wrap text-center">

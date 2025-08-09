@@ -1,6 +1,6 @@
 .brands-wrapper {
   background: #ffffff;
-  padding: calc(var(--vw) * 5) 0;
+  padding: calc(var(--vw) * 5) 0 calc(var(--vw) * 3.2) 0;
 }
 .brands-wrapper .subcopy {
   text-align: center;

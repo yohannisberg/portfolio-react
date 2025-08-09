@@ -42,50 +42,50 @@ const Skills = () => {
 
   return (
     <>
-      <section id="about" className="portfolio-comp skills-wrapper bg-white">
+    <section id="skills" className="portfolio-comp skills-wrapper bg-white">
 
-        <div className="cloudBorderWrap top">
-          <img className="cloudBorderTop" src="/cloud-border.png" alt="Cloud" />
+      {/* <div id="skills" className="navStylesSkills"></div> */}
+
+      <div className="cloudBorderWrap top">
+        <img className="cloudBorderTop" src="/cloud-border.png" alt="Cloud" />
+      </div>
+
+      {/* <div className="cloudBorderWrap bottom">
+        <img className="cloudBorderBottom" src="/cloud-border-bottom-2.png" alt="Cloud" />
+      </div> */}
+
+      <div className="max-1280">
+
+        <div className="header-wrap text-center">
+          <h2 className="section-heading">Skills</h2>
         </div>
 
-        {/* <div className="cloudBorderWrap bottom">
-          <img className="cloudBorderBottom" src="/cloud-border-bottom-2.png" alt="Cloud" />
-        </div> */}
-
-        <div className="max-1280">
-
-          <div className="header-wrap text-center">
-            <h2 className="section-heading">Skills</h2>
-          </div>
-
-          <Slider {...settings} className="skills-icons-wrapper mobile-only-jd">
-            {skillsData.map((data, index) => (
-              <div key={index} className="skills-icon">
-                <div className={`image-wrapper ${data.class}`}>
-                  <img className="image" src={data.image} alt={data.alt} />
-                </div>
-                <p>{data.name}</p>
+        <Slider {...settings} className="skills-icons-wrapper mobile-only-jd">
+          {skillsData.map((data, index) => (
+            <div key={index} className="skills-icon">
+              <div className={`image-wrapper ${data.class}`}>
+                <img className="image" src={data.image} alt={data.alt} />
               </div>
-            ))}
-          </Slider>
+              <p>{data.name}</p>
+            </div>
+          ))}
+        </Slider>
 
-          {/* <IconPhysics /> */}
-
-          <div className="skills-icons-wrapper desktop-only-jd">
-            {skillsData.map((data, index) => (
-              <div key={index} className="skills-icon">
-                <div className={`image-wrapper ${data.class}`}>
-                  <img className="image" src={data.image} alt={data.alt} />
-                </div>
-                <p>{data.name}</p>
+        <div className="skills-icons-wrapper desktop-only-jd">
+          {skillsData.map((data, index) => (
+            <div key={index} className="skills-icon">
+              <div className={`image-wrapper ${data.class}`}>
+                <img className="image" src={data.image} alt={data.alt} />
               </div>
-            ))}
-          </div>
-
+              <p>{data.name}</p>
+            </div>
+          ))}
         </div>
-      </section>
 
-      <div className="" data-parallax="scroll" data-image-src="/background1.JPG"></div>
+      </div>
+    </section>
+
+    <div className="" data-parallax="scroll" data-image-src="/background1.JPG"></div>
     </>
   )
 };

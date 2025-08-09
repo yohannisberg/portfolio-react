@@ -204,11 +204,9 @@ const Hero = () => {
         .fromTo(textRef.current,
           {
             y: 430,
-            scale: 1,
           },
           {
             y: 825,
-            scale: 1.05,
           }, 0)
         .fromTo(layer3Ref.current,
           {
@@ -270,7 +268,7 @@ const Hero = () => {
   }, [isMobile]);
 
   return (
-    <div className="hero-wrapper" ref={heroWrapperRef}>
+    <div id="hero" className="hero-wrapper" ref={heroWrapperRef}>
       <div className="scrollDist" ref={scrollDistRef}></div>
 
       {!isSafari && (

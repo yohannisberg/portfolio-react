@@ -83,6 +83,13 @@
   }
 
   .hero-parallax text {
+    font-size: calc(var(--vwFW) * 10);
+  }
+
+}
+
+@media (max-width: 500px) {
+  .hero-parallax text {
     font-size: calc(var(--vwFW) * 18);
   }
 
@@ -94,7 +101,7 @@
 }
 .hero-static-wrapper text {
   position: absolute;
-  top: calc(var(--vwFW) * 36.75);
+  top: calc(var(--vwFW) * 17.75);
   left: 0;
   right: 0;
   margin: auto;
@@ -114,6 +121,7 @@
 @media (max-width: 768px) {
   .hero-static-wrapper text {
     font-size: calc(var(--vwFW) * 6);
+    top: calc(var(--vwFW) * 31.5);
   }
   .hero-static-wrapper .cloudSafari {
     top: calc(var(--vwFW) * 20);

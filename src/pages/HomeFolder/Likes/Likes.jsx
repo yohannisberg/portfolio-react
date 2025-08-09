@@ -127,7 +127,11 @@ const Likes = () => {
 
   return (
     
-    <section className="portfolio-comp about-lightbulb" ref={containerRef}>
+    <section id="likes" className="portfolio-comp about-lightbulb" ref={containerRef}>
+
+      {/* <div className="navStyles"></div> */}
+
+
       <div className="max-1280">
         <div className="header-wrap text-center">
 
@@ -200,7 +204,7 @@ const Likes = () => {
                 <img src="/mooseTracks.png" />
               </div>
               <p className="title">Moose Tracks</p>
-              <p className="subcopy">There's nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
+              <p className="subcopy">There is nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
             </div>
 
           </div>

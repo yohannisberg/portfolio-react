@@ -36,13 +36,21 @@
   color: #ffffff;
   text-decoration: underline;
 }
-
+.navbar-nav .nav-link {
+  transition: none;
+}
+.navbar-nav .nav-link.active {
+  background: #ffffff;
+  color: #000000;
+  border-radius: calc(var(--vw) * 0.4);
+}
 @media (max-width: 991px) {
   .navbar-custom {
     background-color: var(--blueJD);
   }
   .navbar-custom .container {
     max-width: 900px;
+    padding-right: calc(var(--bs-gutter-x) * .8);
   }
   .navbar-custom .navbar-brand {
     padding-left: calc(var(--vw)*2);

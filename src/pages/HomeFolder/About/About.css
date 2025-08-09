@@ -1,3 +1,115 @@
 .about-wrapper {
   background: var(--grayJD);
+  padding-top: calc(var(--vw) * 4);
+  padding-bottom: calc(var(--vw) * 2.5);
+}
+.about-wrapper .team-member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.about-wrapper .team-member .img-circle {
+  width: calc(var(--vw) * 24);
+  border-radius: calc(var(--vw) * 50);
+  margin-bottom: calc(var(--vw) * 2);
+}
+.about-wrapper .team-member .name {
+  color: var(--bs-body-color);
+  font-weight: 600;
+  font-size: calc(var(--vw) * 2.4);
+  margin-bottom: calc(var(--vw) * 1);
+}
+.about-wrapper .team-member .subcopy {
+  font-size: calc(var(--vw) * 1.3);
+  max-width: calc(var(--vw) * 40);
+  margin-bottom: calc(var(--vw) * 1.75);
+}
+.about-wrapper .team-member .social-buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-bottom: calc(var(--vw) * 1.8);
+}
+.about-wrapper .team-member .social-buttons li {
+  list-style: none;
+  margin: 0 calc(var(--vw) * 1.2);
+}
+.about-wrapper .team-member .social-buttons .svg-inline--fa {
+  height: calc(var(--vw) * 2.8);
+  color: var(--bs-body-color);
+}
+.about-wrapper .team-member a {
+  text-decoration: none;
+}
+.about-wrapper .team-member .resumeButton {
+  font-size: calc(var(--vw) * 1.3);
+  text-transform: uppercase;
+  border: calc(var(--vw) * .2) solid var(--blueJD);
+  padding: calc(var(--vw) * .8) calc(var(--vw) * 3.4);
+  color: var(--bs-body-color);
+  font-weight: 600;
+  margin-bottom: calc(var(--vw) * 3);
+  transition: all .25s;
+}
+.about-wrapper .team-member .resumeButton:hover {
+  background: var(--blueJD);
+  color: #ffffff;
+}
+.copyright-wrapper {
+  background: var(--blueJD);
+  width: 100%;
+  text-align: center;
+  padding:  calc(var(--vw) * 1)  0;
+}
+.copyright-wrapper p {
+  margin:0 auto;
+  font-weight: 100;
+  padding: 0;
+  font-size: calc(var(--vw) * 1.2);
+  letter-spacing: calc(var(--vw) * .02);
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding-top: calc(var(--vw) * 11.5);
+    padding-bottom: calc(var(--vw) * 11);
+  }
+  .about-wrapper .team-member .img-circle {
+    width: calc(var(--vw) * 55);
+    margin-bottom: calc(var(--vw) * 5.5);
+  }
+  .about-wrapper .team-member .name {
+    font-size: calc(var(--vw) * 5);
+    margin-bottom: calc(var(--vw) * 1.7);
+  }
+  .about-wrapper .team-member .subcopy {
+    margin-bottom: calc(var(--vw) * 5.5);
+  }
+  .about-wrapper .team-member .social-buttons {
+    margin-bottom: calc(var(--vw) * 4.2);
+  }
+  .about-wrapper .team-member .social-buttons .svg-inline--fa {
+    height: calc(var(--vw) * 6.75);
+    color: var(--bs-body-color);
+  }
+  .about-wrapper .team-member .social-buttons li {
+    margin: 0 calc(var(--vw) * 3);
+  }
+  .about-wrapper .team-member .resumeButton {
+    margin-bottom: calc(var(--vw) * 8);
+    font-size: calc(var(--vw) * 4.5);
+    border: calc(var(--vw) * .5) solid var(--blueJD);
+    padding: calc(var(--vw) * 1.75) calc(var(--vw) * 6.5);
+  }
+  .about-wrapper .team-member .subcopy {
+    font-size: calc(var(--vw) * 3.8);
+    max-width: calc(var(--vw) * 84);
+  }
+  .copyright-wrapper {
+    padding:  calc(var(--vw) * 2)  0;
+  }
+  .copyright-wrapper p {
+    font-size: calc(var(--vw) * 2.8);
+  }
 }

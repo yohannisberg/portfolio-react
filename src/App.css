@@ -9,6 +9,9 @@
 /* -------------------------------- 
 		General Style
 -------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --vw: 1vw;
@@ -48,6 +51,20 @@
 .portfolio-comp h2,
 .portfolio-comp p {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.portfolio-comp {
+  position: relative;
+}
+
+.portfolio-comp .navStyles {
+  position: absolute;
+  top: calc(var(--vw) * -7);
+}
+
+.portfolio-comp .navStylesSkills {
+  position: absolute;
+  top: calc(var(--vw) * -13);
 }
 
 section h2.section-heading {
