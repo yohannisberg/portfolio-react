@@ -69,10 +69,12 @@
 }
 
 @media (max-width: 768px) {
-
+  .skills-wrapper {
+    padding-bottom: calc(var(--vw) * 10);
+  }
   .skills-wrapper .skills-icons-wrapper {
     display: block;
-    padding: 0;
+    padding: 0 0 calc(var(--vw) * 4) 0;
   }
   .skills-wrapper .skills-icons-wrapper .slick-slide {
     width: calc(var(--vw) * 24);

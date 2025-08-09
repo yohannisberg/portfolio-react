@@ -42,9 +42,9 @@ const Skills = () => {
 
   return (
     <>
-    <section id="skills" className="portfolio-comp skills-wrapper bg-white">
+    <section className="portfolio-comp skills-wrapper bg-white">
 
-      {/* <div id="skills" className="navStylesSkills"></div> */}
+      <div id="skills" className="navStylesSkills"></div>
 
       <div className="cloudBorderWrap top">
         <img className="cloudBorderTop" src="/cloud-border.png" alt="Cloud" />

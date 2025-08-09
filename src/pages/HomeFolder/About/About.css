@@ -1,6 +1,6 @@
 .about-wrapper {
   background: var(--grayJD);
-  padding-top: calc(var(--vw) * 4);
+  padding-top: calc(var(--vw) * 5.5);
   padding-bottom: calc(var(--vw) * 2.5);
 }
 .about-wrapper .team-member {
@@ -87,7 +87,7 @@
     margin-bottom: calc(var(--vw) * 5.5);
   }
   .about-wrapper .team-member .social-buttons {
-    margin-bottom: calc(var(--vw) * 4.2);
+    margin-bottom: calc(var(--vw) * 4.8);
   }
   .about-wrapper .team-member .social-buttons .svg-inline--fa {
     height: calc(var(--vw) * 6.75);
@@ -97,7 +97,7 @@
     margin: 0 calc(var(--vw) * 3);
   }
   .about-wrapper .team-member .resumeButton {
-    margin-bottom: calc(var(--vw) * 8);
+    margin-bottom: calc(var(--vw) * 0);
     font-size: calc(var(--vw) * 4.5);
     border: calc(var(--vw) * .5) solid var(--blueJD);
     padding: calc(var(--vw) * 1.75) calc(var(--vw) * 6.5);

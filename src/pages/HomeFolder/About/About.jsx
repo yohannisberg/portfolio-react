@@ -9,9 +9,9 @@ const About = () => {
 
   return (
     <>
-    <section id="about" className="portfolio-comp about-wrapper">
+    <section className="portfolio-comp about-wrapper">
 
-      {/* <div className="navStyles"></div> */}
+      <div id="about" className="navStyles"></div>
 
       <div className="max-1280">
         <div className="header-wrap text-center">

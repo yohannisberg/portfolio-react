@@ -1,7 +1,7 @@
 .portfolio-wrapper {
   background: var(--grayJD);
   padding-top: calc(var(--vw) * 5.5);
-  padding-bottom: calc(var(--vw) * 3);
+  padding-bottom: calc(var(--vw) * 0);
 }
 .portfolio-wrapper h2.section-heading {
   margin-bottom: calc(var(--vw) * 0.4);
@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  padding-bottom: calc(var(--vw) * 4.3);
 }
 
 .portfolio-wrapper .all-projects-wrapper .portfolio-item {
@@ -121,11 +122,12 @@
   }
   .portfolio-wrapper .all-projects-wrapper {
     margin-top: calc(var(--vw) * 9);
+    padding-bottom: 0;
   }
   .portfolio-wrapper .all-projects-wrapper .portfolio-item {
     width: 87%;
-    padding-bottom: calc(var(--vw) * 3);
-    margin-bottom: calc(var(--vw) * 9.75);
+    padding-bottom: calc(var(--vw) * 4);
+    margin-bottom: calc(var(--vw) * 10);
   }
   .portfolio-wrapper .all-projects-wrapper .portfolio-item .img {
     margin-bottom: calc(var(--vw) * 4.75);

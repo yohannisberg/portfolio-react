@@ -1,6 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// For ScrollSpy
+import * as bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// Attach bootstrap to window so you can use it in your components
+window.bootstrap = bootstrap;
+
+
 import './index.css'
 import App from './App.jsx'
 

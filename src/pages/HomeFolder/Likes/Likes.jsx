@@ -7,7 +7,7 @@ import { Draggable } from 'gsap/Draggable';
 // Register plugins
 gsap.registerPlugin(MorphSVGPlugin, Draggable);
 
-import Lightbulb from '../Lightbulb/Lightbulb';
+import Lightbulb from './Lightbulb/Lightbulb';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
@@ -127,9 +127,9 @@ const Likes = () => {
 
   return (
     
-    <section id="likes" className="portfolio-comp about-lightbulb" ref={containerRef}>
+    <section className="portfolio-comp about-lightbulb" ref={containerRef}>
 
-      {/* <div className="navStyles"></div> */}
+      <div id="likes" className="navStyles"></div>
 
 
       <div className="max-1280">

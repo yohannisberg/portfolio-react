@@ -75,7 +75,7 @@
 }
 @media (max-width: 768px) {
   .brands-wrapper {
-    padding: calc(var(--vw) * 15) 0;
+    padding: calc(var(--vw) * 10) 0;
   }
   .brands-wrapper .subcopy {
     font-size: calc(var(--vw) * 3.8);

@@ -27,7 +27,7 @@
   align-items: center;
   background: var(--bg);
   padding-top: calc(var(--vw) * 5.5);
-  padding-bottom: calc(var(--vw) * 2);
+  padding-bottom: calc(var(--vw) * 6);
 }
 
  .about-lightbulb .max-1280 {
@@ -74,7 +74,7 @@
 .about-lightbulb .about-cat-wrapper {
   position: relative;
   width: 100%;
-  height: calc(var(--vw) * 20);
+  height: calc(var(--vw) * 15);
 }
 .about-lightbulb .about-cat-wrapper .skill-wrap {
   width: calc(var(--vw) * 25);
@@ -189,6 +189,7 @@
 
   .about-lightbulb {
     padding-bottom: calc(var(--vw) * 10);
+    padding-top: calc(var(--vw) * 11.5);
   }
   .about-lightbulb .header-wrap {
     padding-left: calc(var(--vw) * 1.5);

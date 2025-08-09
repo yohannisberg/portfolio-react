@@ -1,11 +1,12 @@
 import './Portfolio.css';
 import ProjectCard from './ProjectCard';
-
+import Brands from './Brands/Brands';
 
 const Portfolio = () => {
-
   return (
-    <section id="portfolio" className="portfolio-comp portfolio-wrapper">
+    <>
+    <section  className="portfolio-comp portfolio-wrapper">
+      <div id="portfolio" class="navStyles"></div>
 
       <div className="max-1280">
         <div className="header-wrap text-center">
@@ -15,7 +16,9 @@ const Portfolio = () => {
 
         <ProjectCard />
       </div>
+      <Brands />
     </section>
+    </>
   )
 };
 
