@@ -1,3 +1,84 @@
-nav {
-  z-index: 2;
-}
+  .navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: white;
+          border-bottom: 1px solid #ddd;
+          z-index: 9999;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 0 1rem;
+          font-family: Arial, sans-serif;
+        }
+        .navbar-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          max-width: 960px;
+          margin: 0 auto;
+        }
+        .navbar-brand {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        .navbar-toggle {
+          font-size: 1.5rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: none;
+        }
+        .navbar-links {
+          list-style: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+        }
+        .navbar-links li {
+          margin-left: 1.5rem;
+        }
+        .navbar-links a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+          transition: color 0.1s;
+        }
+        .navbar-links a.active {
+          color: #007bff;
+          border-bottom: 2px solid #007bff;
+          padding-bottom: 2px;
+        }
+        .navbar-links a:hover {
+          color: #0056b3;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+          .navbar-toggle {
+            display: block;
+          }
+          .navbar-links {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            width: 200px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.1s ease-out;
+          }
+          .navbar-links.open {
+            max-height: 300px; /* enough height for all links */
+          }
+          .navbar-links li {
+            margin: 1rem 0;
+            text-align: right;
+            margin-right: 1rem;
+          }
+        }

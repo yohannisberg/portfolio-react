@@ -4,9 +4,7 @@ import Brands from './Brands/Brands';
 
 const Portfolio = () => {
   return (
-    <>
-    <section  className="portfolio-comp portfolio-wrapper">
-      <div id="portfolio" class="navStyles"></div>
+    <section id="portfolio" className="portfolio-comp portfolio-wrapper">
 
       <div className="max-1280">
         <div className="header-wrap text-center">
@@ -18,7 +16,6 @@ const Portfolio = () => {
       </div>
       <Brands />
     </section>
-    </>
   )
 };
 

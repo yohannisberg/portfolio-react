@@ -57,16 +57,6 @@ html {
   position: relative;
 }
 
-.portfolio-comp .navStyles {
-  position: absolute;
-  top: calc(var(--vw) * -3.5);
-}
-
-.portfolio-comp .navStylesSkills {
-  position: absolute;
-  top: calc(var(--vw) * -8.5);
-}
-
 section h2.section-heading {
   font-size: calc(var(--vw) * 4.297);
   text-transform: uppercase;
@@ -94,12 +84,5 @@ section p.section-subcopy {
     margin-top: calc(var(--vw) * 0);
     margin-bottom: calc(var(--vw) * 3.4);
     font-style: italic;
-  }
-  .portfolio-comp .navStyles {
-    top: calc(var(--vw) * -8.5);
-  }
-
-  .portfolio-comp .navStylesSkills {
-    top: calc(var(--vw) * -20);
   }
 }

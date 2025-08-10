@@ -173,17 +173,18 @@ const Hero = () => {
           rotation: -10
         },
         {
-          y: 30,
+          // y: 30,
+          y: 90,
           scale: 1,
           transformOrigin: origin,
           rotation: 0
         }, 0)
       .fromTo(heroWrapperRef.current,
         {
-          marginBottom: 0,
+          // marginBottom: 0,
         },
         {
-          marginBottom: -65,
+          // marginBottom: -65,
         }, 0);
 
       return () => tl.kill();
@@ -254,13 +255,13 @@ const Hero = () => {
             x: 85,
             transformOrigin: origin
           }, 0)
-        .fromTo(heroWrapperRef.current,
-          {
-            marginBottom: 0,
-          },
-          {
-            marginBottom: -10,
-          }, 0);
+        // .fromTo(heroWrapperRef.current,
+        //   {
+        //     marginBottom: 0,
+        //   },
+        //   {
+        //     marginBottom: -10,
+        //   }, 0);
         return () => tl.kill();
       });
     }

@@ -1,45 +1,91 @@
-import React, { useEffect, useState } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import './TopNavNew.css'
+
+
+const SECTIONS = [
+  { id: "skills", label: "Skills" },
+  { id: "likes", label: "Likes" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "about", label: "About" },
+];
 
 export default function TopNavNew() {
-  const [expanded, setExpanded] = useState(false); // track navbar open/close
+  const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const scrollSpy = new window.bootstrap.ScrollSpy(document.body, {
-      target: "#mainNavbar",
-      offset: 70,
+  // Smooth scroll to section with offset for fixed header
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const headerOffset = 70; // adjust this to your fixed navbar height
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
     });
-    return () => scrollSpy.dispose();
-  }, []);
-
-  // Close navbar when a nav link is clicked (on mobile)
-  const handleNavClick = () => {
-    setExpanded(false);
   };
 
+  // Update activeSection on scroll
+  useEffect(() => {
+    const headerOffset = 70;
+
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset + headerOffset + 1; // +1 to handle edge cases
+
+      let currentSection = SECTIONS[0].id; // default
+
+      for (let section of SECTIONS) {
+        const elem = document.getElementById(section.id);
+        if (elem) {
+          const elemTop = elem.offsetTop;
+          if (scrollPosition >= elemTop) {
+            currentSection = section.id;
+          }
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initialize on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Navbar
-      id="mainNavbar"
-      expand="lg"
-      fixed="top"
-      bg="dark"
-      variant="dark"
-      className="shadow"
-      expanded={expanded} // control expanded state
-      onToggle={(isExpanded) => setExpanded(isExpanded)} // update expanded state
-    >
-      <Container>
-        <Navbar.Brand href="#hero">John D'Agostino</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#skills" onClick={handleNavClick}>Skills</Nav.Link>
-            <Nav.Link href="#likes" onClick={handleNavClick}>Likes</Nav.Link>
-            <Nav.Link href="#portfolio" onClick={handleNavClick}>Portfolio</Nav.Link>
-            <Nav.Link href="#about" onClick={handleNavClick}>About</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <div className="navbar-brand">John D'Agostino</div>
+          <button
+            className="navbar-toggle"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+          <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+            {SECTIONS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  onClick={(e) => handleNavClick(e, id)}
+                  className={activeSection === id ? "active" : ""}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }

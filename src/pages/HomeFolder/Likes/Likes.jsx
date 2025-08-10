@@ -127,10 +127,7 @@ const Likes = () => {
 
   return (
     
-    <section className="portfolio-comp about-lightbulb" ref={containerRef}>
-
-      <div id="likes" className="navStyles"></div>
-
+    <section id="likes" className="portfolio-comp about-lightbulb" ref={containerRef}>
 
       <div className="max-1280">
         <div className="header-wrap text-center">
