@@ -80,6 +80,26 @@ export const PortfolioData = [
     archived: ''
   },
   {
+    image: '/adot.jpg',
+    imageAlt: 'ADOT landing page',
+    title: 'Arizona Department of Transportation',
+    subtitle: 'Landing page for department of transportation',
+    blurb1: 'Created while at Bigfish Creative Group',
+    link: '/adot',
+    companyClass: "bigfish",
+    companyImage: './bigfish.jpg',
+    companyAlt: 'Bigfish Creative Group',
+    companyLink: 'https://www.linkedin.com/company/bigfish-creative-group/posts/?feedView=all',
+    blurb2:'I developed the entire fully responsive landing\u00A0page',
+    tech: 'SASS, HTML, Gulp & ScrollMagic.js',
+    funct: 'User can find information regarding the Arizona Travel ID',
+    videoTour:'',
+    videoLink:'',
+    bonusImg:'',
+    bonusCaption: "",
+    archived: ''
+  },
+  {
     image: '/sandoval500.jpg',
     imageAlt: 'Sandoval Website',
     title: 'Sandoval Design & Marketing',

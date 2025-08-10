@@ -37,7 +37,7 @@ const ProjectCard = () => {
             <div className="linksWrapper">
               {data.link && (
                 <Link to={data.link} target="_blank" rel="noopener noreferrer">
-                  <p>Live <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p> 
+                  <p class="live">Live <img src='./open_link_white.png' className="openLink" alt="External Link Icon" /></p> 
                 </Link>
               )}
               {data.videoTour && <a href={data.videoLink} target="_blank"><p>Video Tour <img src='./open_link.png' className="openLink" alt="External Link Icon" /></p></a>}

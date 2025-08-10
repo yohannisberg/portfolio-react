@@ -11,7 +11,6 @@ const Portfolio = () => {
           <h2 className="section-heading">Portfolio</h2>
           <p className="section-subcopy">(All projects made from scratch)</p>
         </div>
-
         <ProjectCard />
       </div>
       <Brands />
