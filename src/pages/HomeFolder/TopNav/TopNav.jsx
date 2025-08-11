@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
 import './TopNav.css'
 
-const TopNav = () => {
-  // setScrolled is a state updater function
+
+const SECTIONS = [
+  { id: "hero", label: "Hero" },
+  { id: "skills", label: "Skills" },
+  { id: "likes", label: "Likes" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "about", label: "About" },
+];
+
+export default function TopNavNew() {
+  const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [expanded, setExpanded] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -17,46 +25,80 @@ const TopNav = () => {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-  // Smooth scroll and collapse menu, no manual activeSection setting here
+
+  // Smooth scroll to section with offset for fixed header
   const handleNavClick = (e, id) => {
     e.preventDefault();
-    const element = document.getElementById(id);
-    const offset = 70; // navbar height in px
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - offset;
+    setMenuOpen(false);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-    setExpanded(false); // collapse mobile menu after click
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const headerOffset = 70; // adjust this to your fixed navbar height
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
-  return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      expanded={expanded}
-      onToggle={(isExpanded) => setExpanded(isExpanded)} // control navbar collapse
-      className={`navbar-custom custom-navbar ${scrolled ? 'scrolled' : ''}`}
-    >
-      <Container>
-        <Navbar.Brand href="#">John D'Agostino</Navbar.Brand>
-        <Navbar.Toggle aria-controls="main-navbar-nav" />
-        <Navbar.Collapse id="main-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#skills" onClick={() => setExpanded(false)}>Skills</Nav.Link>
-            <Nav.Link href="#likes" onClick={() => setExpanded(false)}>Likes</Nav.Link>
-            <Nav.Link href="#portfolio" onClick={() => setExpanded(false)}>Portfolio</Nav.Link>
-            <Nav.Link href="#about" onClick={() => setExpanded(false)}>About</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
+  // Update activeSection on scroll
+  useEffect(() => {
+    const headerOffset = 70;
 
-export default TopNav;
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset + headerOffset + 1; // +1 to handle edge cases
+
+      let currentSection = SECTIONS[0].id; // default
+
+      for (let section of SECTIONS) {
+        const elem = document.getElementById(section.id);
+        if (elem) {
+          const elemTop = elem.offsetTop;
+          if (scrollPosition >= elemTop) {
+            currentSection = section.id;
+          }
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initialize on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <>
+      <nav className={`navbar navbar-custom custom-navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="navbar-container">
+          <div className="navbar-brand">John D'Agostino</div>
+          <button
+            className="navbar-toggle"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label="Toggle menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+            {SECTIONS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  onClick={(e) => handleNavClick(e, id)}
+                  className={activeSection === id ? "active" : ""}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+}

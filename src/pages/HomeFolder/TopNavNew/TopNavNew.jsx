@@ -12,6 +12,18 @@ const SECTIONS = [
 export default function TopNavNew() {
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 60); // this will be 'true' once larger than 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Smooth scroll to section with offset for fixed header
   const handleNavClick = (e, id) => {
@@ -61,7 +73,7 @@ export default function TopNavNew() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar navbar-custom custom-navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <div className="navbar-brand">John D'Agostino</div>
           <button

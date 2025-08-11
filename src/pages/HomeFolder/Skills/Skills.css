@@ -68,6 +68,12 @@
   margin-bottom: calc(var(--vw) * 1);
 }
 
+@media (min-width: 768px) {
+  .skills-wrapper .skills-icons-wrapper .skills-icon:nth-child(19) {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-wrapper {
     padding-bottom: calc(var(--vw) * 10);

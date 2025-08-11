@@ -6,14 +6,15 @@ import './Skills.css'
 const Skills = () => {
 
   var settings = {
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: false,
     arrows: true,
     dots: false,
-    infinite: false,
+    infinite: true,
     centerMode: false,
     variableWidth: true,
     centerPadding:0,
+    draggable: 1, 
   };
 
   const skillsData = [
@@ -35,7 +36,7 @@ const Skills = () => {
     { class:"express", image: '/express.png', alt: 'Express.JS Logo', name: 'Express.JS' },
     { class:"gulp", image: '/gulp.svg', alt: 'Gulp Logo', name: 'Gulp' },
     { class:"bootstrap", image: '/Boostrap_logo.svg', alt: 'Bootstrap Logo', name: 'Bootstrap' },
-    // { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
+    { class:"gwb", image: '/google-web-designer.svg', alt: 'Google Web Designer', name: 'GWD'},
     { class:"photoshop", image: '/pscs6.png', alt: 'Adobe Photoshop Logo', name: 'Photoshop' },
     { class:"brackets", image: '/coding.png', alt: 'Brackets', name: '(More to come!)' },
   ];
