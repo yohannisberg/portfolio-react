@@ -132,7 +132,7 @@ export const PortfolioData = [
     companyLink: 'https://sandovaldesign.com',
     blurb2:"I developed the Films and TV Series pages for Quality Flix's official website",
     tech: 'PHP, Wordpress, Gulp, SASS\u00A0&\u00A0HTML',
-    funct: 'User can find information regarding the independent film company Quality Flix',
+    funct: 'User can find information regarding the independent film company Quality\u00A0Flix',
     videoTour:'1',
     videoLink:'https://www.youtube.com/watch?v=VxTAagihZjQ',
     bonusImg:'',

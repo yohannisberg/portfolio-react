@@ -78,7 +78,7 @@
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p {
   margin-bottom:  calc(var(--vw) * 1.5);
   letter-spacing: calc(var(--vw) * .05);
-  padding: calc(var(--vw) * .9) calc(var(--vw) * 1) calc(var(--vw) * 0.8) calc(var(--vw) * 1);
+  padding: calc(var(--vw) * .9) calc(var(--vw) * 1) calc(var(--vw) * 0.7) calc(var(--vw) * 1);
   transition: all .25s;
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p.live {
@@ -86,7 +86,7 @@
   color: #ffffff;
   font-size: calc(var(--vw) * 1.1);
   border-radius: calc(var(--vw) * .5);
-  padding: calc(var(--vw) * .9) calc(var(--vw) * 1.3) calc(var(--vw) * 0.8) calc(var(--vw) * 1.3);
+  padding: calc(var(--vw) * .9) calc(var(--vw) * 1.3) calc(var(--vw) * 0.7) calc(var(--vw) * 1.3);
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p:hover {
   transform: scale(1.08);

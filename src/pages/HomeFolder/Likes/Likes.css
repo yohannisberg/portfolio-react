@@ -191,6 +191,10 @@
     padding-bottom: calc(var(--vw) * 10);
     padding-top: calc(var(--vw) * 11.5);
   }
+  .about-lightbulb .max-1280 {
+    padding: 0 calc(var(--vw) * 4.8);
+  }
+
   .about-lightbulb .header-wrap {
     padding-left: calc(var(--vw) * 1.5);
   }
@@ -238,7 +242,7 @@
   }
   .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
     margin-right: calc(var(--vw) * 1);
-    margin-left: calc(var(--vw) * -1);
+    margin-left: calc(var(--vw) * 1);
     height: calc(var(--vw) * 5);
   }
   .about-lightbulb .about-cat-wrapper .about-day-wrapper,

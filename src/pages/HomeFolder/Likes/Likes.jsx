@@ -156,7 +156,7 @@ const Likes = () => {
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faUtensils} />
               <p className="title">Cooking</p>
-              <p className="subcopy">Experimenting with flavors is a&nbsp;little like debugging, just&nbsp;tastier.</p>
+              <p className="subcopy">Experimenting with flavors is&nbsp;a&nbsp;little like debugging, just&nbsp;tastier.</p>
             </div>
 
             <div className="skill-wrap">
@@ -168,7 +168,7 @@ const Likes = () => {
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faMusic} />
               <p className="title">Music</p>
-              <p className="subcopy">I enjoy making music, but don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
+              <p className="subcopy">I enjoy making music, but&nbsp;don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
             </div>
 
           </div>
@@ -187,7 +187,7 @@ const Likes = () => {
               <FontAwesomeIcon icon={faFilm} />
 
               <p className="title">Watching Movies</p>
-              <p className="subcopy">Love a good movie after work. I&nbsp;have a soft spot for old noir&nbsp;films.</p>
+              <p className="subcopy">I&nbsp;have a soft spot for old noir&nbsp;films. And yes, I have&nbsp;<br className="desktop-only-jd"/>a <a href="https://letterboxd.com/WastingMoney1/" target="_blank">Letterboxd<img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" /></a></p>
             </div>
 
             <div className="skill-wrap">
@@ -201,7 +201,7 @@ const Likes = () => {
                 <img src="/mooseTracks.png" />
               </div>
               <p className="title">Moose Tracks</p>
-              <p className="subcopy">There is nothing better than Moose&nbsp;Tracks Ice&nbsp;Cream.</p>
+              <p className="subcopy">There is nothing better than a&nbsp;bowl of Moose Tracks Ice&nbsp;Cream.</p>
             </div>
 
           </div>
