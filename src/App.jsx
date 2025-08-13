@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import {Home} from './pages/HomeFolder/Home'
 import {Adot} from './pages/AdotFolder/Adot'
