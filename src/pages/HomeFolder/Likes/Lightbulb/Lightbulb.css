@@ -46,7 +46,12 @@
 .bulb__cap-outline {
 	stroke: var(--stroke);
 }
-
+@media (min-width: 769px) and (max-width: 1200px) {
+  .toggle-scene {
+    right: calc(var(--vw) * -7.25);
+    width: calc(var(--vw) * 5.5);
+  }
+}
 @media only screen and (max-width:48em) {
   .toggle-scene {
     top: calc(var(--vw) * -3);

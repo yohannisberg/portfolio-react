@@ -122,6 +122,41 @@
   margin-bottom: calc(var(--vw) * 1.8);
 }
 
+@media (min-width: 769px) and (max-width: 1200px) {
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item {
+    width: 44%;
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .title {
+    font-size: calc(var(--vw) * 1.8);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .sub-title {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper {
+    margin-bottom: calc(var(--vw) * 1.4);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p.live {
+    font-size: calc(var(--vw) * 1.5);
+    padding: calc(var(--vw) * 1.1) calc(var(--vw) * 2.1) calc(var(--vw) * 1) calc(var(--vw) * 2.2);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description p {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .sandoval {
+    width: calc(var(--vw) * 25);
+    margin-right: calc(var(--vw) * -3.9);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .bigfish {
+    width: calc(var(--vw) * 9);
+  }
+  .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .archived {
+    font-size: calc(var(--vw) * 1.5);
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-wrapper {
     padding-top: calc(var(--vw) * 11.5);
@@ -190,6 +225,5 @@
     margin-right: calc(var(--vw) * -8);
     margin-top: calc(var(--vw) * -0.2);
     margin-bottom: calc(var(--vw) * 5.75);
-    }
   }
 }

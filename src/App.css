@@ -13,6 +13,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 :root {
   --vw: 1vw;
   --vwFW: 1vw;
@@ -20,23 +21,33 @@ html {
   --blueJD: #65afff;
   --grayJD: #eeeeee;
 }
+
+@media screen and (min-width:1800px) {
+  :root {
+    --vwFW: 12.8px;
+    --vw: 12.8px;
+  }
+}
+
 /* 1280px = 80em */
 /* 1200px = 75em */
-@media only screen and (min-width:80em) {
+/* 768px = 48em */
+@media only screen and (min-width:1280px) and (max-width:1799px) {
   :root {
+    --vwFW: 1vw;
     --vw: 12.8px;
   }
 }
 
 /* Desktop */
-@media only screen and (min-width:48em) {
+@media only screen and (min-width:768px) {
   .mobile-only-jd {
     display: none !important;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width:48em) {
+@media only screen and (max-width:768px) {
   .desktop-only-jd {
     display: none !important;
   }
@@ -70,6 +81,15 @@ section p.section-subcopy {
   margin-top: calc(var(--vw) * 0);
   margin-bottom: calc(var(--vw) * 3.4);
   font-style: italic;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  section h2.section-heading {
+    font-size: calc(var(--vw) * 6);
+  }
+  section p.section-subcopy {
+    font-size: calc(var(--vw) * 2);
+    margin-bottom: calc(var(--vw) * 4);
+  }
 }
 
 @media (max-width: 768px) {

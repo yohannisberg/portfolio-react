@@ -73,6 +73,12 @@
 .brands-wrapper .brand-logos-wrapper .brand-wrap .zondervan {
   padding-top: calc(var(--vw) * 0.2);
 }
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .brands-wrapper .subcopy {
+    font-size: calc(var(--vw) * 1.5);
+  }
+}
 @media (max-width: 768px) {
   .brands-wrapper {
     padding: calc(var(--vw) * 10) 0;

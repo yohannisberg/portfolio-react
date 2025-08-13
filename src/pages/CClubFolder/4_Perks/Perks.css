@@ -1,32 +1,32 @@
 
 .table-component {
-	padding: calc(var(--vw)*10) 0 calc(var(--vw)*11) 0;
+	padding: calc(var(--vwCC)*10) 0 calc(var(--vwCC)*11) 0;
 }
 .table-component .white-background {
 	position: relative;
-	width: calc(var(--vw)*95);
-	padding: calc(var(--vw)*5) 0 calc(var(--vw)*8) 0;
+	width: calc(var(--vwCC)*95);
+	padding: calc(var(--vwCC)*5) 0 calc(var(--vwCC)*8) 0;
 }
 .table-component .grid-wrapper .table {
   display: table;
-	width: calc(var(--vw)*69.231);
+	width: calc(var(--vwCC)*69.231);
   margin: 0 auto;
   border-collapse:collapse;
 }
 .table-component .grid-wrapper .table-row {
   display: table-row;
-  margin-bottom: calc(var(--vw)*-.25);
+  margin-bottom: calc(var(--vwCC)*-.25);
 }
 .table-component .grid-wrapper .table-row p {
 	font-weight: 800;
-	padding: calc(var(--vw)*1.5) calc(var(--vw)*1.2);
-	border: var(--cclubDarkBlue) calc(var(--vw)*.25) solid;
+	padding: calc(var(--vwCC)*1.5) calc(var(--vwCC)*1.2);
+	border: var(--cclubDarkBlue) calc(var(--vwCC)*.25) solid;
 	vertical-align: middle;
 	line-height: .95;
 }
 .table-component .grid-wrapper .table-row p:nth-child(1) {
 	/*width: 60%;*/
-	width: calc(var(--vw)*40);
+	width: calc(var(--vwCC)*40);
 }
 .table-component .grid-wrapper .table-row p:nth-child(2),
 .table-component .grid-wrapper .table-row p:nth-child(3) {
@@ -46,7 +46,7 @@
   margin: 0 auto;
 }
 .table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(1) {
-	font-size: calc(var(--vw)*3.4);
+	font-size: calc(var(--vwCC)*3.4);
 }
 .table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(2),
 .table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(3) {
@@ -55,13 +55,13 @@
 .table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(2) img,
 .table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(3) img {
 	margin: 0 auto;
-	height: calc(var(--vw)*3.5);
-	margin-bottom: calc(var(--vw)*-.65);
+	height: calc(var(--vwCC)*3.5);
+	margin-bottom: calc(var(--vwCC)*-.65);
 }
 .table-component .grid-wrapper .table .table-row p:nth-child(2) span,
 .table-component .grid-wrapper .table .table-row p:nth-child(3) span {
 	font-weight: 400;
-	font-size: calc(var(--vw)*1.2);
+	font-size: calc(var(--vwCC)*1.2);
 	text-transform: none !important;
 	background: rgba(0,0,0,0);
 }
@@ -72,49 +72,49 @@
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	bottom: calc(var(--vw)*-1.6);
+	bottom: calc(var(--vwCC)*-1.6);
 }
 
 @media only screen and (max-width:48em){
 	.table-component {
-		padding: calc(var(--vw)*18) 0 calc(var(--vw)*20) 0
+		padding: calc(var(--vwCC)*18) 0 calc(var(--vwCC)*20) 0
 	}
 	.table-component .white-background {
 		width: 100%;
-		padding: calc(var(--vw)*10) 0 calc(var(--vw)*15) 0;
+		padding: calc(var(--vwCC)*10) 0 calc(var(--vwCC)*15) 0;
 	}
 	.table-component .grid-wrapper .table {
-		width: calc(var(--vw)*95);
+		width: calc(var(--vwCC)*95);
 	}
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(1) {
-		font-size: calc(var(--vw)*7);
+		font-size: calc(var(--vwCC)*7);
 		text-align: center;
 	}
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(2),
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(3) {
-		font-size: calc(var(--vw)*3.5);
+		font-size: calc(var(--vwCC)*3.5);
 	}
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(2) img, 
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(3) img {
-		height: calc(var(--vw)*8);
+		height: calc(var(--vwCC)*8);
 	}
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(2) img {
-		margin-bottom: calc(var(--vw)*-2);
+		margin-bottom: calc(var(--vwCC)*-2);
 	}
 	.table-component .grid-wrapper .table .table-row:nth-child(1) p:nth-child(3) img {
-		margin-bottom: calc(var(--vw)*-2);
+		margin-bottom: calc(var(--vwCC)*-2);
 	}
 	.table-component .grid-wrapper .table .table-row p:nth-child(2) span,
 	.table-component .grid-wrapper .table .table-row p:nth-child(3) span {
-		font-size: calc(var(--vw)*2.75);
+		font-size: calc(var(--vwCC)*2.75);
 	}
 	.table-component .grid-wrapper .table-row p {
-		padding: calc(var(--vw)*3.75) calc(var(--vw)*2.4);
-		border: var(--cclubDarkBlue) calc(var(--vw)*.75) solid;
-		font-size: calc(var(--vw)*3.8);
+		padding: calc(var(--vwCC)*3.75) calc(var(--vwCC)*2.4);
+		border: var(--cclubDarkBlue) calc(var(--vwCC)*.75) solid;
+		font-size: calc(var(--vwCC)*3.8);
 	}
 	.table-component .cta-wrapper {
-		bottom: calc(var(--vw)*-0.6);
+		bottom: calc(var(--vwCC)*-0.6);
 
 	}
 }

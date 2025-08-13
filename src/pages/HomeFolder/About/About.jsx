@@ -39,7 +39,7 @@ const About = () => {
             </li>
           </ul>
 
-          <a href="https://docs.google.com/document/d/1QTBCnF45PV5jrsRxrta-1Ko4zSbClkQopub4s-S-Eok/edit?usp=sharing" target="_blank">
+          <a href="https://docs.google.com/document/d/1lG6dhE9emVmBq0aZZ0fCNgOBY5m12BKBNCaC-Let8ns/edit?usp=sharing" target="_blank">
             <p className="resumeButton">Resume</p>
           </a>
 

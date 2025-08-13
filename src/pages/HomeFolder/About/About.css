@@ -70,6 +70,15 @@
   letter-spacing: calc(var(--vw) * .02);
 }
 
+@media (min-width: 769px) and (max-width: 1200px) {
+  .about-wrapper .team-member .subcopy {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .about-wrapper .team-member .resumeButton {
+    font-size: calc(var(--vw) * 1.5);
+  }
+}
+
 @media (max-width: 768px) {
   .about-wrapper {
     padding-top: calc(var(--vw) * 11.5);

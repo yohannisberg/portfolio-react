@@ -5,11 +5,13 @@
 }
 
 .flip3d-inner {
+  cursor: pointer;
   width: calc(var(--vw) * 8.5);
   height: calc(var(--vw) * 3.5);
   transition: transform .65s;
   transform-style: preserve-3d;
   position: relative;
+  margin: 0 auto;
 }
 
 .flip3d-inner.flipped {
@@ -47,6 +49,15 @@
 
 }
 
+@media (min-width: 769px) and (max-width: 1200px) {
+  .flip3d-front, .flip3d-back {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .flip3d-inner {
+    width: calc(var(--vw) * 10.5);
+    height: calc(var(--vw) * 4.5);
+  }
+}
 @media (max-width: 768px) {
   .flip3d-inner {
     width: calc(var(--vw) * 34.5);

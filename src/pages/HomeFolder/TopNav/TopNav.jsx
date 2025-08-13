@@ -82,7 +82,7 @@ export default function TopNavNew() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle menu"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
             {SECTIONS.map(({ id, label }) => (

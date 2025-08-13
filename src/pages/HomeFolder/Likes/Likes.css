@@ -115,7 +115,7 @@
   color: inherit;
 }
 .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy .ltrboxd {
-  margin-right: calc(var(--vw) * .2);
+  margin-left: calc(var(--vw) * .2);
   height: calc(var(--vw) * 1.5);
 }
 
@@ -181,9 +181,39 @@
 		opacity: 0.4;
 	}
 }
-
-
 /* About Night - End */
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .about-lightbulb {
+    padding-bottom: calc(var(--vw) * 11.2);
+  }
+  .about-lightbulb .header-wrap .section-heading {
+    margin-bottom: calc(var(--vw) * 4.8);
+  }
+  .about-lightbulb .header-wrap .pull-arrow-wrapper {
+    top: calc(var(--vw) * 0.75);
+  }
+  .about-lightbulb .about-cat-wrapper .neon {
+    right: calc(var(--vw) * -3);
+    top: calc(var(--vw) * -10.5);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .svg-inline--fa {
+    height: calc(var(--vw) * 5.5);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .title {
+    font-size: calc(var(--vw) * 1.8);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .subcopy {
+    font-size: calc(var(--vw) * 1.5);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper {
+    height: calc(var(--vw) * 5.5);
+  }
+  .about-lightbulb .about-cat-wrapper .skill-wrap .mTWrapper img {
+    height: calc(var(--vw) * 8);
+  }
+}
 
 @media only screen and (max-width:48em) {
 
