@@ -86,7 +86,7 @@
   color: #ffffff;
   font-size: calc(var(--vw) * 1.1);
   border-radius: calc(var(--vw) * .5);
-  padding: calc(var(--vw) * .9) calc(var(--vw) * 1.3) calc(var(--vw) * 0.7) calc(var(--vw) * 1.3);
+  padding: calc(var(--vw) * 1) calc(var(--vw) * 1.7) calc(var(--vw) * 0.8) calc(var(--vw) * 1.7);
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .linksWrapper a p:hover {
   transform: scale(1.08);
@@ -99,6 +99,11 @@
 
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description p {
   font-size: calc(var(--vw) * 1.05);
+}
+.portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .fhlBonus {
+  width: 85%;
+  margin-top: calc(var(--vw) * 1.5);
+  margin-bottom: calc(var(--vw) * 1.5);
 }
 .portfolio-wrapper .all-projects-wrapper .portfolio-item .panel .description .archived {
   text-transform: uppercase;

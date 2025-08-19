@@ -65,6 +65,13 @@ const ProjectCard = () => {
               <p className="muted">
                 <b>Functionality:</b> {data.funct}
               </p>
+
+              {data.bonusImg && (
+                <img src={data.bonusImg} className={data.bonusImgClass} alt={data.bonusImgAlt} />
+              )}
+              {data.bonusCaption && (
+                <p className="bonusCaption">{data.bonusCaption}</p>
+              )}
             </div>
           </div>
         </div>
