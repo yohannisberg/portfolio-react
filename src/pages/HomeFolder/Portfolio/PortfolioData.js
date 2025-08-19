@@ -162,7 +162,7 @@ export const PortfolioData = [
   {
     image: '/cstudio.jpg',
     imageAlt: "Claire's C.Studio Website",
-    title: "Claire's C.Club",
+    title: "Claire's C.Studio",
     subtitle: "Landing page for Claire’s video series",
     blurb1: "Created while at Claire's",
     link: 'https://yohannisberg.github.io/cstudio/',
