@@ -121,7 +121,7 @@ export const PortfolioData = [
     bonusCaption: "",
     archived: ''
   },
-    {
+  {
     image: '/gift-finder.jpg',
     imageAlt: "Claire's Gift Finder Component",
     title: "Claire's Gift Finder",
@@ -158,6 +158,25 @@ export const PortfolioData = [
     bonusImg:'',
     bonusCaption: "",
     archived: 1
+  },
+  {
+    image: '/cstudio.jpg',
+    imageAlt: "Claire's C.Studio Website",
+    title: "Claire's C.Club",
+    subtitle: "Landing page for Claire’s video series",
+    blurb1: "Created while at Claire's",
+    link: 'https://yohannisberg.github.io/cstudio/',
+    companyClass: "claires",
+    companyImage: '/claires_logo.png',
+    companyAlt: "Claire's",
+    companyLink: 'https://claires.com',
+    tech: 'JavaScript, CSS\u00A0&\u00A0HTML',
+    funct: "Users can watch the latest C.Studio episodes and shop stylist-curated products",
+    videoTour:'',
+    videoLink:'',
+    bonusImg:'',
+    bonusCaption: '',
+    archived: ''
   },
   {
     image: '/mvd.jpg',
