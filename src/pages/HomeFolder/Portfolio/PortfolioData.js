@@ -157,7 +157,7 @@ export const PortfolioData = [
     videoLink:'',
     bonusImg:'',
     bonusCaption: "",
-    archived: 1
+    archived: ''
   },
   {
     image: '/cstudio.jpg',
