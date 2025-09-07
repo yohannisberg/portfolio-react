@@ -4,7 +4,6 @@ import {Home} from './pages/HomeFolder/Home'
 import {Adot} from './pages/AdotFolder/Adot'
 import {CClub} from './pages/CClubFolder/CClub'
 
-
 export default function App() {
 
   return (

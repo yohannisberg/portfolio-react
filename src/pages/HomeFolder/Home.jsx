@@ -7,6 +7,8 @@ import Likes from './Likes/Likes';
 import Portfolio from './Portfolio/Portfolio';
 import About from './About/About';
 
+import { BuilderComponent } from '@builder.io/react';
+
 export function Home() {
   return (
     <>
@@ -18,6 +20,8 @@ export function Home() {
       <Likes />
       <Portfolio />
       <About />
+
+      <BuilderComponent model="page" />
     </>
   );
 };

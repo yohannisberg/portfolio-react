@@ -132,7 +132,7 @@ export const PortfolioData = [
     companyImage: './sandovalLogo.png',
     companyAlt: 'Sandoval Design & Marketing',
     companyLink: 'https://sandovaldesign.com',
-    blurb2:'I developed the entire fully responsive website in less than two weeks',
+    blurb2:'I developed the entire fully responsive website in less than two weeks. NOTE: Since the original site was taken down, I re-hosted it using a mix of files I recovered from an old local drive and code salvaged through web.archive.org. I would just like to make a note that 2025 me is cringing at the code for this site (this was developed in 2017), despite the design being so cool. Feel free to ask me what I would do differently\u00A0now!\u00A0😊',
     tech: ' PHP, Wordpress, Gravity Forms, Git, Gulp, SASS\u00A0&\u00A0HTML',
     funct: 'User can find information regarding GCC and contact their\u00A0team',
     videoTour:'',
@@ -235,7 +235,7 @@ export const PortfolioData = [
     tech: 'ScrollReveal.js, Git, Gulp, CSS\u00A0&\u00A0HTML',
     funct: 'User can read about and contact the\u00A0company',
     videoTour:'1',
-    videoLink:'https://www.youtube.com/watch?v=nTNNX86ZKUg',
+    videoLink:'https://www.youtube.com/watch?v=9YQ-wBq0RAo',
     bonusImg:'',
     bonusCaption: "",
     archived: 1
