@@ -5,7 +5,6 @@ import { Builder, builder } from "@builder.io/react";
 import { FancyCallout } from "./components/FancyCallout";
 
 builder.init("59e38532d569405f84fa31a7843a0d36");
-c;
 
 Builder.registerComponent(FancyCallout, {
   name: "FancyCallout",
