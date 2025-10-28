@@ -13,7 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 :root {
   --vw: 1vw;
   --vwFW: 1vw;
@@ -22,7 +21,7 @@ html {
   --grayJD: #eeeeee;
 }
 
-@media screen and (min-width:1800px) {
+@media screen and (min-width: 1800px) {
   :root {
     --vwFW: 12.8px;
     --vw: 12.8px;
@@ -32,7 +31,7 @@ html {
 /* 1280px = 80em */
 /* 1200px = 75em */
 /* 768px = 48em */
-@media only screen and (min-width:1280px) and (max-width:1799px) {
+@media only screen and (min-width: 1280px) and (max-width: 1799px) {
   :root {
     --vwFW: 1vw;
     --vw: 12.8px;
@@ -40,14 +39,14 @@ html {
 }
 
 /* Desktop */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .mobile-only-jd {
     display: none !important;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .desktop-only-jd {
     display: none !important;
   }
@@ -56,7 +55,7 @@ html {
 .max-1280 {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .portfolio-comp h2,

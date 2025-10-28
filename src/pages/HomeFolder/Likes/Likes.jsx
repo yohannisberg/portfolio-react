@@ -1,47 +1,48 @@
-import './Likes.css'
+import "./Likes.css";
 
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
-import { Draggable } from 'gsap/Draggable';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+import { Draggable } from "gsap/Draggable";
 // Register plugins
 gsap.registerPlugin(MorphSVGPlugin, Draggable);
 
-import Lightbulb from './Lightbulb/Lightbulb';
+import Lightbulb from "./Lightbulb/Lightbulb";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faMusic } from '@fortawesome/free-solid-svg-icons';
-import { faHiking } from '@fortawesome/free-solid-svg-icons';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
-import { faBed } from '@fortawesome/free-solid-svg-icons';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import { faHiking } from "@fortawesome/free-solid-svg-icons";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { faBed } from "@fortawesome/free-solid-svg-icons";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
 
 const Likes = () => {
-
   const containerRef = useRef(null);
 
   useEffect(() => {
     const AUDIO = {
-      CLICK: new Audio('/click.mp3'),
+      CLICK: new Audio("/click.mp3"),
     };
 
     const STATE = { ON: true };
-    const CORD_DURATION = .1;
+    const CORD_DURATION = 0.1;
 
     const container = containerRef.current;
 
-    const CORDS = container.querySelectorAll('.toggle-scene__cord');
-    const HIT = container.querySelector('.toggle-scene__hit-spot');
-    const DUMMY = container.querySelector('.toggle-scene__dummy-cord');
-    const DUMMY_CORD = container.querySelector('.toggle-scene__dummy-cord line');
-    const PROXY = document.createElement('div');
+    const CORDS = container.querySelectorAll(".toggle-scene__cord");
+    const HIT = container.querySelector(".toggle-scene__hit-spot");
+    const DUMMY = container.querySelector(".toggle-scene__dummy-cord");
+    const DUMMY_CORD = container.querySelector(
+      ".toggle-scene__dummy-cord line"
+    );
+    const PROXY = document.createElement("div");
 
     let startX, startY;
 
-    const ENDX = DUMMY_CORD.getAttribute('x2');
-    const ENDY = DUMMY_CORD.getAttribute('y2');
+    const ENDX = DUMMY_CORD.getAttribute("x2");
+    const ENDY = DUMMY_CORD.getAttribute("y2");
 
     let dayOpacity = 1;
     let nightOpacity = 0;
@@ -58,24 +59,29 @@ const Likes = () => {
       paused: true,
       onStart: () => {
         STATE.ON = !STATE.ON;
-        gsap.set(document.documentElement, { '--on': STATE.ON ? 1 : 0 });
+        gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
 
         dayOpacity = !dayOpacity;
         nightOpacity = !nightOpacity;
-        gsap.set(document.documentElement, { '--dayOpacity': dayOpacity ? 1 : 0 });
-        gsap.set(document.documentElement, { '--nightOpacity': nightOpacity ? 1 : 0 });
-        
+        gsap.set(document.documentElement, {
+          "--dayOpacity": dayOpacity ? 1 : 0,
+        });
+        gsap.set(document.documentElement, {
+          "--nightOpacity": nightOpacity ? 1 : 0,
+        });
+
         blackWhite = !blackWhite;
-        gsap.set(document.documentElement, { '--blackWhite': blackWhite ? '#000000' : '#ffffff' });
+        gsap.set(document.documentElement, {
+          "--blackWhite": blackWhite ? "#000000" : "#ffffff",
+        });
 
-
-        gsap.set([DUMMY, HIT], { display: 'none' });
-        gsap.set(CORDS[0], { display: 'block' });
+        gsap.set([DUMMY, HIT], { display: "none" });
+        gsap.set(CORDS[0], { display: "block" });
         AUDIO.CLICK.play();
       },
       onComplete: () => {
-        gsap.set([DUMMY, HIT], { display: 'block' });
-        gsap.set(CORDS[0], { display: 'none' });
+        gsap.set([DUMMY, HIT], { display: "block" });
+        gsap.set(CORDS[0], { display: "none" });
         RESET();
       },
     });
@@ -93,7 +99,7 @@ const Likes = () => {
 
     Draggable.create(PROXY, {
       trigger: HIT,
-      type: 'x,y',
+      type: "x,y",
       onPress: (e) => {
         startX = e.x;
         startY = e.y;
@@ -126,12 +132,13 @@ const Likes = () => {
   }, []);
 
   return (
-    
-    <section id="likes" className="portfolio-comp about-lightbulb" ref={containerRef}>
-
+    <section
+      id="likes"
+      className="portfolio-comp about-lightbulb"
+      ref={containerRef}
+    >
       <div className="max-1280">
         <div className="header-wrap text-center">
-
           <Lightbulb />
 
           <h2 className="section-heading">Things I&nbsp;Like</h2>
@@ -141,74 +148,105 @@ const Likes = () => {
             <img className="arrow day" src="/arrow-black.png" alt="Arrow" />
             <img className="arrow night" src="/arrow-white.png" alt="Arrow" />
           </div>
-
         </div>
-
 
         <div className="about-cat-wrapper">
           <div className="about-day-wrapper">
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faCode} />
               <p className="title">Coding</p>
-              <p className="subcopy">It's deeply rewarding to creatively solve problems and turn ideas into&nbsp;experiences.</p>
+              <p className="subcopy">
+                It's deeply rewarding to creatively solve problems and turn
+                ideas into&nbsp;experiences.
+              </p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faUtensils} />
               <p className="title">Cooking</p>
-              <p className="subcopy">Experimenting with flavors is&nbsp;a&nbsp;little like debugging, just&nbsp;tastier.</p>
+              <p className="subcopy">
+                Experimenting with flavors is&nbsp;a&nbsp;little like debugging,
+                just&nbsp;tastier.
+              </p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faHiking} />
               <p className="title">Hiking</p>
-              <p className="subcopy">There’s nothing like fresh&nbsp;air and a good trail to reset and&nbsp;recharge.</p>
+              <p className="subcopy">
+                There’s nothing like fresh&nbsp;air and a good trail to reset
+                and&nbsp;recharge.
+              </p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faMusic} />
               <p className="title">Music</p>
-              <p className="subcopy">I enjoy making music, but&nbsp;don't worry, you won't&nbsp;catch me singing to&nbsp;myself.</p>
+              <p className="subcopy">
+                I enjoy making music, but&nbsp;don't worry, you won't&nbsp;catch
+                me singing to&nbsp;myself.
+              </p>
             </div>
-
           </div>
 
           <div className="about-night-wrapper">
-
-            <p className="neon" data-text="U">AF<span className="flicker-slow">T</span>ER <br />DA<span className="flicker-fast">R</span>K</p>
+            <p className="neon" data-text="U">
+              AF<span className="flicker-slow">T</span>ER <br />
+              DA<span className="flicker-fast">R</span>K
+            </p>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faBook} />
               <p className="title">Reading</p>
-              <p className="subcopy">Lately before bed, I've been journeying through Middle&nbsp;Earth.</p>
+              <p className="subcopy">
+                Lately before bed, I've been journeying through
+                Middle&nbsp;Earth.
+              </p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faFilm} />
 
               <p className="title">Watching Movies</p>
-              <p className="subcopy">I&nbsp;have a soft spot for old noir&nbsp;films. And yes, I have&nbsp;<br className="desktop-only-jd"/>a <a href="https://letterboxd.com/WastingMoney1/" target="_blank">Letterboxd<img className="ltrboxd" src="/letterboxd.svg" alt="Letterboxd Logo" /></a></p>
+              <p className="subcopy">
+                I&nbsp;have a soft spot for old noir&nbsp;films. And yes, I
+                have&nbsp;
+                <br className="desktop-only-jd" />a{" "}
+                <a href="https://letterboxd.com/WastingMoney1/" target="_blank">
+                  Letterboxd
+                  <img
+                    className="ltrboxd"
+                    src="/letterboxd.svg"
+                    alt="Letterboxd Logo"
+                  />
+                </a>
+              </p>
             </div>
 
             <div className="skill-wrap">
               <FontAwesomeIcon icon={faBed} />
               <p className="title">Sleeping</p>
-              <p className="subcopy">"(A) man needs his seven hours, keeps your mind sharp." - Paulie&nbsp;Walnuts</p>
+              <p className="subcopy">
+                "(A) man needs his seven hours, keeps your mind sharp." -
+                Paulie&nbsp;Walnuts
+              </p>
             </div>
 
             <div className="skill-wrap">
               <div className="mTWrapper">
-                <img src="/mooseTracks.png" />
+                <img src="/mooseTracks.png" alt="Moose Tracks Ice Cream" />
               </div>
               <p className="title">Moose Tracks</p>
-              <p className="subcopy">There is nothing better than a&nbsp;bowl of Moose Tracks Ice&nbsp;Cream.</p>
+              <p className="subcopy">
+                There is nothing better than a&nbsp;bowl of Moose Tracks
+                Ice&nbsp;Cream.
+              </p>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 };
 
 export default Likes;
